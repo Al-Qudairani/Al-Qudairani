@@ -4,6 +4,7 @@ import { useState } from 'react';
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 import AddIcCallSharpIcon from '@mui/icons-material/AddIcCallSharp';
 import NightsStaySharpIcon from '@mui/icons-material/NightsStaySharp';
+import DisabledByDefaultSharpIcon from '@mui/icons-material/DisabledByDefaultSharp';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -48,7 +49,7 @@ export default function Navbar() {
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
           >
-            <MenuSharpIcon fontSize="small" />
+            {open ? <DisabledByDefaultSharpIcon fontSize="small" /> : <MenuSharpIcon fontSize="small" />}
           </button>
           <button
             className="p-2 rounded-full hover:bg-card-light dark:hover:bg-card-dark transition-colors"
