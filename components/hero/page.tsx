@@ -27,13 +27,13 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#products"
-            className="bg-primary hover:bg-primary-dark text-secondary font-bold text-lg py-4 px-10 rounded-full shadow-2xl ring-1 ring-white/10 transition-transform transform hover:-translate-y-1"
+            className="bg-primary hover:bg-primary-dark text-secondary font-bold text-lg py-4 px-10 rounded-md shadow-2xl ring-1 ring-white/10 transition-transform transform hover:-translate-y-1"
           >
             اطلع على منتجاتنا
           </a>
           <a
             href="#about"
-            className="bg-transparent border-2 border-white/80 hover:border-white text-white font-bold text-lg py-4 px-10 rounded-full backdrop-blur-sm transition-colors"
+            className="bg-transparent border-2 border-white/80 hover:border-white text-white font-bold text-lg py-4 px-10 rounded-md backdrop-blur-sm transition-colors"
           >
             اعرف المزيد
           </a>
