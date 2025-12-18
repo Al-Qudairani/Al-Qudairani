@@ -1,12 +1,18 @@
 import "./globals.css";
-import { Cairo } from "next/font/google";
 import Navbar from "../../components/navbar/page";
+import localFont from "next/font/local";
 
-const cairo = Cairo({ subsets: ["arabic", "latin"] });
+const expoArabic = localFont({
+  src: "../../public/Fonts/alfont_com_AlFont_com_ExpoArabic-Book-1.ttf",
+  weight: "400",
+  style: "normal",
+  variable: "--font-expo",
+  display: "swap",
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ar" dir="rtl" className={cairo.className}>
+    <html lang="ar" dir="rtl" className={expoArabic.variable}>
       <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />

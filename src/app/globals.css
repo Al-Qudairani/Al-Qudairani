@@ -22,8 +22,8 @@
   --color-background: var(--background);
   --color-card-light: var(--card-light);
   --color-card-dark: var(--card-dark);
-  --font-sans: Cairo, sans-serif;
-  --font-display: Cairo, sans-serif;
+  --font-sans: var(--font-expo), Cairo, sans-serif;
+  --font-display: var(--font-expo), Cairo, sans-serif;
   --font-mono: monospace;
   --radius: 0.5rem;
 }
