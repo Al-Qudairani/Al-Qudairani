@@ -1,13 +1,15 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faList, faPhone } from '@fortawesome/free-solid-svg-icons';
+import MenuSharpIcon from '@mui/icons-material/MenuSharp';
+import AddIcCallSharpIcon from '@mui/icons-material/AddIcCallSharp';
+import NightsStaySharpIcon from '@mui/icons-material/NightsStaySharp';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
   return (
-    <header className="fixed w-full top-0 z-50 bg-card-light/90 backdrop-blur-md shadow-md border-b-4 border-primary">
+    <header className="fixed w-full top-0 z-50 bg-background/90 backdrop-blur-md shadow-md border-b-4 border-primary">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center gap-3">
           <Image
@@ -19,10 +21,10 @@ export default function Navbar() {
           />
           <div className="hidden md:block">
             <h1 className="text-xl font-bold text-primary-dark">شركة القديراني</h1>
-            <p className="text-xs text-secondary/70">AL-QUDAIRANI COMPANY</p>
+            <p className="text-xs text-foreground">AL-QUDAIRANI COMPANY</p>
           </div>
         </div>
-        <nav className="hidden md:flex gap-1 font-semibold text-secondary">
+        <nav className="hidden md:flex gap-1 font-semibold text-foreground">
           <a
             className="px-3 py-2 rounded-md bg-primary text-secondary transition-colors"
             href="#"
@@ -42,22 +44,24 @@ export default function Navbar() {
         </nav>
         <div className="flex items-center gap-4">
           <button
-            className="p-2 md:hidden rounded-md bg-card-light hover:bg-card-dark/10 text-foreground transition-colors"
+            className="p-2 md:hidden rounded-md bg-card-light hover:bg-card-dark/10 text-secondary transition-colors"
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
           >
-            <FontAwesomeIcon icon={faList} className="h-5 w-5" />
+            <MenuSharpIcon fontSize="small" />
           </button>
           <button
             className="p-2 rounded-full hover:bg-card-light dark:hover:bg-card-dark transition-colors"
             aria-label="Toggle dark mode"
-            onClick={() => document.documentElement.classList.toggle('dark')}
+            onClick={() => {
+              document.documentElement.classList.toggle('dark');
+              setIsDark((v) => !v);
+            }}
           >
-            <span className="material-icons text-secondary">brightness_6</span>
+            <NightsStaySharpIcon fontSize="large" className={isDark ? 'text-primary-dark cursor-pointer' : 'text-background-dark cursor-pointer'} />
           </button>
-          <button className="hidden md:inline-flex items-center justify-center gap-2 bg-primary cursor-pointer hover:bg-primary-dark text-secondary font-bold py-4 px-8 rounded-md shadow-lg transition-all transform hover:scale-105 leading-none"
-          >
-            <FontAwesomeIcon icon={faPhone} className="h-5 w-5 shrink-0" />
+          <button className="hidden md:inline-flex items-center justify-center gap-2 bg-primary cursor-pointer hover:bg-primary-dark text-secondary font-bold py-4 px-8 rounded-md shadow-lg transition-all transform hover:scale-105 leading-none">
+            <AddIcCallSharpIcon fontSize="small" className="shrink-0" />
             <span>تواصل معنا</span>
           </button>
         </div>
