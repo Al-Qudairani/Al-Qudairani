@@ -1,7 +1,11 @@
 'use client';
 import Image from 'next/image';
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faList } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
   return (
     <header className="fixed w-full top-0 z-50 bg-background/90 backdrop-blur-md shadow-md">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -38,6 +42,13 @@ export default function Navbar() {
         </nav>
         <div className="flex items-center gap-4">
           <button
+            className="p-2 md:hidden rounded-md bg-card-light hover:bg-card-dark/10 text-foreground transition-colors"
+            aria-label="Toggle menu"
+            onClick={() => setOpen((v) => !v)}
+          >
+            <FontAwesomeIcon icon={faList} className="h-5 w-5" />
+          </button>
+          <button
             className="p-2 rounded-full hover:bg-card-light dark:hover:bg-card-dark transition-colors"
             aria-label="Toggle dark mode"
             onClick={() => document.documentElement.classList.toggle('dark')}
@@ -45,11 +56,29 @@ export default function Navbar() {
             <span className="material-icons text-foreground">brightness_6</span>
           </button>
           <a
-            className="hidden sm:inline-flex bg-primary hover:bg-primary-dark text-secondary font-bold py-2 px-6 rounded-md shadow-lg transition-all transform hover:scale-105"
+            className="hidden md:inline-flex bg-primary hover:bg-primary-dark text-secondary font-bold py-2 px-6 rounded-md shadow-lg transition-all transform hover:scale-105"
             href="#contact"
           >
             تواصل معنا
           </a>
+        </div>
+      </div>
+      <div className={`${open ? 'block' : 'hidden'} md:hidden bg-background border-t border-card-dark/20`} role="dialog" aria-modal="true">
+        <div className="container mx-auto px-4 py-3">
+          <div className="flex flex-col gap-3 font-semibold text-foreground">
+            <a className="hover:text-primary transition-colors" href="#" onClick={() => setOpen(false)}>
+              الرئيسية
+            </a>
+            <a className="hover:text-primary transition-colors" href="#about" onClick={() => setOpen(false)}>
+              من نحن
+            </a>
+            <a className="hover:text-primary transition-colors" href="#products" onClick={() => setOpen(false)}>
+              منتجاتنا
+            </a>
+            <a className="hover:text-primary transition-colors" href="#contact" onClick={() => setOpen(false)}>
+              اتصل بنا
+            </a>
+          </div>
         </div>
       </div>
     </header>
