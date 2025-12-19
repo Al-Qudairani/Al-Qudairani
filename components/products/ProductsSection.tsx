@@ -73,15 +73,15 @@ export default function ProductsSection() {
     <section className="py-20 bg-background transition-colors duration-300 dark:bg-background-dark" id="products">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-primary font-bold text-lg mb-2 block">ماذا نقدم</span>
+          <span className="text-primary dark:text-primary-dark font-bold text-lg mb-2 block">ماذا نقدم</span>
           <h2 className="text-4xl font-bold text-foreground">منتجاتنا وخدماتنا</h2>
-          <div className="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+          <div className="w-24 h-1 bg-primary dark:bg-primary-dark mx-auto mt-4 rounded-full"></div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-card-light dark:bg-card-dark rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group border-b-4 border-primary"
+              className="bg-card-light dark:bg-card-dark rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group border-b-4 border-primary dark:border-primary-dark"
             >
               <div className="h-48 overflow-hidden relative">
                 <Image
@@ -95,7 +95,7 @@ export default function ProductsSection() {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-secondary dark:text-primary-dark">{product.title}</h3>
                 <p className="text-foreground/70 dark:text-foreground/70 text-sm mb-4 line-clamp-2">{product.description}</p>
-                <Link href="#" className="text-sm font-bold text-primary dark:text-primary-dark hover:text-primary-dark dark:hover:text-primary uppercase tracking-wide inline-block">
+                <Link href="#" className="text-sm font-bold text-primary dark:text-primary-dark hover:text-primary-dark dark:hover:text-primary-dark uppercase tracking-wide inline-block">
                   عرض التفاصيل
                 </Link>
               </div>
