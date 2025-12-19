@@ -95,7 +95,7 @@ export default function ProductsSection() {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-secondary dark:text-primary-dark">{product.title}</h3>
                 <p className="text-foreground/70 dark:text-foreground/70 text-sm mb-4 line-clamp-2">{product.description}</p>
-                <Link href="#" className="text-sm font-bold text-primary dark:text-primary-dark hover:text-primary-dark dark:hover:text-primary-dark uppercase tracking-wide inline-block">
+                <Link href="#" className="text-sm font-bold text-primary dark:text-primary-dark hover:bg-primary-dark dark:hover:text-primary uppercase tracking-wide inline-block bg-primary dark:bg-primary-dark text-white px-4 py-2 rounded-md transition-colors duration-300">
                   عرض التفاصيل
                 </Link>
               </div>
