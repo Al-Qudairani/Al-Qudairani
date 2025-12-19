@@ -22,13 +22,13 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-12 mt-12 place-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 place-items-center">
           <div className="text-center">
             <h3 className="text-xl font-bold text-primary mb-6">تواصل معنا الآن!</h3>
             <ul className="space-y-4">
               <li className="flex items-center justify-center gap-3">
                 <LocationOnSharpIcon className="text-primary" fontSize="small" />
-                <span className="text-gray-300">سوريا - دمشق - المنطقة الصناعية</span>
+                <span className="text-gray-300">سوريا - حلب - الباب </span>
               </li>
               <li className="flex items-center justify-center gap-3">
                 <AddIcCallSharpIcon className="text-primary" fontSize="small" />
@@ -52,36 +52,36 @@ export default function Footer() {
                 href="https://wa.me/963111234567"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-secondary transition-all shadow-md"
+                className="w-18 h-18 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-secondary transition-all shadow-md"
               >
-                <WhatsAppIcon fontSize="small" />
+                <WhatsAppIcon fontSize="large" />
               </a>
               <a
                 aria-label="Instagram"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-secondary transition-all shadow-md"
+                className="w-18 h-18 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-secondary transition-all shadow-md"
               >
-                <InstagramIcon fontSize="small" />
+                <InstagramIcon fontSize="large" />
               </a>
               <a
                 aria-label="Facebook"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-secondary transition-all shadow-md"
+                className="w-18 h-18 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-secondary transition-all shadow-md"
               >
-                <FacebookIcon fontSize="small" />
+                <FacebookIcon fontSize="large" />
               </a>
               <a
                 aria-label="WhatsApp 2"
                 href="https://wa.me/963536663558"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-secondary transition-all shadow-md"
+                className="w-18 h-18 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-secondary transition-all shadow-md"
               >
-                <WhatsAppIcon fontSize="small" />
+                <WhatsAppIcon fontSize="large" />
               </a>
             </div>
           </div>
