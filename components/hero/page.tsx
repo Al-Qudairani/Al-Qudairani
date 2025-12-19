@@ -18,10 +18,10 @@ export default function Hero() {
         <div className="inline-block p-2 px-4 rounded-full bg-primary/20 border border-primary text-primary mb-6 shadow-md">
           <span className="font-bold">الجودة والثقة شعارنا</span>
         </div>
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-xl">
+        <h1 className="text-4xl md:text-6xl lg:text-5xl font-bold text-white mb-6 leading-tight drop-shadow-xl">
           مرحبا بكم في <span className="text-primary">شركة القديراني</span>
         </h1>
-        <p className="text-lg md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+        <p className="text-md md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
           شركة القديراني للدواجن.. خبرة عريقة في السوق السوري، نوفر لكم من خلالها أجود المنتجات والخدمات المتكاملة في قطاع الدواجن
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

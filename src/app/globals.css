@@ -31,6 +31,7 @@
 .dark {
   --background: var(--background-dark);
   --foreground: #ededed;
+  --card-light: var(--card-dark);
 }
 
 body {
