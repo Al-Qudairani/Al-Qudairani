@@ -95,8 +95,20 @@ export default function ProductsSection() {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-secondary dark:text-primary-dark">{product.title}</h3>
                 <p className="text-foreground/70 dark:text-foreground/70 text-sm mb-4 line-clamp-2">{product.description}</p>
-                <Link href="#" className="text-sm font-bold text-primary dark:text-primary-dark hover:bg-primary-dark dark:hover:text-primary uppercase tracking-wide inline-block bg-primary dark:bg-primary-dark text-white px-4 py-2 rounded-md transition-colors duration-300">
-                  عرض التفاصيل
+                <Link
+                  href="#"
+                  className="relative overflow-hidden inline-flex items-center gap-2 text-sm font-bold bg-primary dark:bg-primary-dark text-white px-4 py-2 rounded-md transition-colors duration-300 transition-transform hover:-translate-y-0.5 hover:scale-[1.02] focus:scale-[1.02] hover:bg-primary-dark dark:hover:bg-primary"
+                >
+                  <span>عرض التفاصيل</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="w-4 h-4 translate-x-0 group-hover:-translate-x-1 hover:-translate-x-1 transition-transform duration-300"
+                  >
+                    <path d="M12.293 4.293a1 1 0 011.414 1.414L9.414 10l4.293 4.293a1 1 0 01-1.414 1.414L7.586 10l4.707-5.707z" />
+                  </svg>
+                  <span className="after:content-[''] after:absolute after:inset-y-0 after:-left-10 after:w-10 after:bg-white/20 after:skew-x-[-20deg] after:opacity-0 hover:after:opacity-100 hover:after:translate-x-[140%] after:transition-all after:duration-500"></span>
                 </Link>
               </div>
             </div>
