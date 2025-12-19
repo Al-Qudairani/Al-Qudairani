@@ -97,7 +97,7 @@ export default function ProductsSection() {
                 <p className="text-foreground/70 dark:text-foreground/70 text-sm mb-4 line-clamp-2">{product.description}</p>
                 <Link
                   href="#"
-                  className="relative overflow-hidden inline-flex items-center gap-2 text-sm font-bold bg-primary dark:bg-primary-dark text-white px-4 py-2 rounded-md transition-colors duration-300 transition-transform hover:-translate-y-0.5 hover:scale-[1.02] focus:scale-[1.02] hover:bg-primary-dark dark:hover:bg-primary"
+                  className="relative overflow-hidden inline-flex items-center gap-2 text-sm font-bold bg-primary dark:bg-primary-dark text-card-dark px-4 py-2 rounded-md transition-colors duration-300 transition-transform hover:-translate-y-0.5 hover:scale-[1.02] focus:scale-[1.02] hover:bg-primary-dark dark:hover:bg-primary"
                 >
                   <span>عرض التفاصيل</span>
                   <svg
