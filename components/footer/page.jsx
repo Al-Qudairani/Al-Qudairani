@@ -1,70 +1,93 @@
 'use client';
+import Image from 'next/image';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import AddIcCallSharpIcon from '@mui/icons-material/AddIcCallSharp';
+import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
+import EmailSharpIcon from '@mui/icons-material/EmailSharp';
 export default function Footer() {
   return (
-    <footer className="bg-secondary text-white pt-16 pb-8 border-t-4 border-primary" id="contact">
+    <footer className="bg-secondary text-white py-20 border-t-4 border-primary" id="contact">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          <div className="space-y-4">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center text-secondary font-bold border border-primary-dark">
-                <span className="material-icons text-xl">flutter_dash</span>
-              </div>
-              <span className="text-2xl font-bold">شركة القديراني</span>
-            </div>
-            <p className="text-gray-400 leading-relaxed">
-              الخيار الأول لمنتجات الدواجن في سوريا. جودة، ثقة، وأمان غذائي لكل عائلة.
-            </p>
+        <div className="flex flex-col items-center text-center gap-6">
+          <div className="flex items-center justify-center">
+            <Image alt="Al-Qudairani Logo" src="/icons/13.png" width={200} height={200} className="h-40 w-40 object-contain" />
           </div>
-
           <div>
-            <h3 className="text-xl font-bold text-primary mb-6">روابط سريعة</h3>
-            <ul className="space-y-3">
-              <li>
-                <a className="text-gray-300 hover:text-primary transition-colors" href="#">
-                  الرئيسية
-                </a>
-              </li>
-              <li>
-                <a className="text-gray-300 hover:text-primary transition-colors" href="#about">
-                  عن الشركة
-                </a>
-              </li>
-              <li>
-                <a className="text-gray-300 hover:text-primary transition-colors" href="#products">
-                  منتجاتنا
-                </a>
-              </li>
-              <li>
-                <a className="text-gray-300 hover:text-primary transition-colors" href="#">
-                  سياسة الخصوصية
-                </a>
-              </li>
-            </ul>
+            <h2 className="text-5xl font-extrabold tracking-wide">شركة القديراني</h2>
           </div>
+          <p className="text-gray-300 max-w-4xl">
+            شركة القديراني من أقدم الشركات الداجنة في سوريا، تقدم كافة الخدمات والمنتجات المتعلقة بالدواجن.
+          </p>
+        </div>
 
-          <div>
-            <h3 className="text-xl font-bold text-primary mb-6">تواصل معنا</h3>
+        <div className="grid grid-cols-2 gap-12 mt-12 place-items-center">
+          <div className="text-center">
+            <h3 className="text-xl font-bold text-primary mb-6">تواصل معنا الآن!</h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <span className="material-icons text-primary mt-1">location_on</span>
+              <li className="flex items-center justify-center gap-3">
+                <LocationOnSharpIcon className="text-primary" fontSize="small" />
                 <span className="text-gray-300">سوريا - دمشق - المنطقة الصناعية</span>
               </li>
-              <li className="flex items-center gap-3">
-                <span className="material-icons text-primary">phone</span>
-                <span className="text-gray-300" dir="ltr">
-                  +963 11 123 4567
-                </span>
+              <li className="flex items-center justify-center gap-3">
+                <AddIcCallSharpIcon className="text-primary" fontSize="small" />
+                <span className="text-gray-300" dir="ltr">+963 11 123 4567</span>
               </li>
-              <li className="flex items-center gap-3">
-                <span className="material-icons text-primary">email</span>
+              <li className="flex items-center justify-center gap-3">
+                <AddIcCallSharpIcon className="text-primary" fontSize="small" />
+                <span className="text-gray-300" dir="ltr">+963 536 663 55 58</span>
+              </li>
+              <li className="flex items-center justify-center gap-3">
+                <EmailSharpIcon className="text-primary" fontSize="small" />
                 <span className="text-gray-300">info@alqudairani.com</span>
               </li>
             </ul>
           </div>
-
+          <div className="text-center">
+            <h3 className="text-xl font-bold text-primary mb-6">تابعنا عبر وسائل التواصل!</h3>
+            <div className="flex items-center justify-center gap-4">
+              <a
+                aria-label="WhatsApp"
+                href="https://wa.me/963111234567"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-secondary transition-all shadow-md"
+              >
+                <WhatsAppIcon fontSize="small" />
+              </a>
+              <a
+                aria-label="Instagram"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-secondary transition-all shadow-md"
+              >
+                <InstagramIcon fontSize="small" />
+              </a>
+              <a
+                aria-label="Facebook"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-secondary transition-all shadow-md"
+              >
+                <FacebookIcon fontSize="small" />
+              </a>
+              <a
+                aria-label="WhatsApp 2"
+                href="https://wa.me/963536663558"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-secondary transition-all shadow-md"
+              >
+                <WhatsAppIcon fontSize="small" />
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 text-center text-gray-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-white/10 pt-8 text-center text-gray-500 text-sm mt-12">
           <p>© 2026 شركة القديراني. جميع الحقوق محفوظة.</p>
         </div>
       </div>
