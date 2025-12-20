@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <header className="fixed w-full top-0 z-50 bg-background/90 backdrop-blur-md shadow-md border-b-4 border-primary">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1">
           <Image
             alt="Al-Qudairani Company Logo"
             className="h-20 w-auto object-contain"
