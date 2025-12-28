@@ -8,16 +8,15 @@ const products = [
   {
     id: 1,
     slug: "broiler",
-    title: "الدجاج اللاحم",
+    title: "بيض مائدة",
     description: "توفير أجود أنواع الدجاج اللاحم المربى في مزارع صحية وبأعلى المعايير.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDi99WMThy2ErHAz1bNNrGYyIhBU8hfyiHkPgBiuJzSffWtpK1YJqwnLlVpU6M-IIRfo3DOLplwu9pFYlZ5B5-TwiayAZv_Sk1Frtuy9iz_Ms3XJrqpl7vtCKpb6AOJegrtK8aGYwWxuyNDdoFvhDgwbtat4-yfF4Ld65j2Bsq7P9gxTA_z3KnNm4NODIWhQlxo-6L6ZKHOLgcdj-Gl-9oFVic5SRi9csGhcU1mltps3xVLKUXAaaqw8dsWjAQWrQRG_BLRckW1_yA",
+    image: "/icons/whiteEgg.png",
     alt: "Chickens",
   },
   {
     id: 2,
     slug: "layers",
-    title: "الدجاج البياض",
+    title: "بيض تفقيس",
     description: "سلالات مميزة من الدجاج البياض ذات إنتاجية عالية ومناعة قوية.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBVLrDZGOfLC8URt7lxLoItIN1VBt7l1cJDZ_MUiUAGn651eBYt68nV_5_yj5DKiKy7ZjaE_EGgrFiKbeXH1Que8g1ZDhIy7RwfmHex0BhpyPgsA_Cdiuh2qpu_gGwKwv66GSNCfyQOp3Y8sOXdm8JKr8DU-uRE1SHcrzGQTGanr63D3_95HPPw4Ruy0lmEGJLk4tj-ZL1Q_t6RGXxnZYZ0-Z7k7KNy7obw8W4wjCOu0iN83nEWVKpn6gMqW6s9NC1BptjbPH4moyE",
@@ -26,7 +25,7 @@ const products = [
   {
     id: 3,
     slug: "feeds",
-    title: "الأعلاف",
+    title: "لحوم دواجن",
     description: "تركيبات علفية متوازنة تضمن النمو السليم والإنتاجية العالية للطيور.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuAp3ohUqYBAnNe96CtxsjPIoONRutng-41oXazhWK0IXNkj1VFop_4Ku7_j4h1_J--MOEnDjRfuAe_6nTRhSvhiDlzBaHOhlFfU9pivayhmUAjDSghweMGY4WokS6OJIhnrvYJhXSDHf9MjuA3o9X1L2PmxusRlCuT-KAYNbYtubURHZ13vEvMjfNNiBnrCUC-o-IPEwLVKqTsBbSO-IqcQCfG9Y4uDU2YcfJgwhQMSpRsfVZUREVn3ifiBKDs-CE17S6WRAc2i64A",
@@ -35,7 +34,7 @@ const products = [
   {
     id: 4,
     slug: "table-eggs",
-    title: "بيض المائدة",
+    title: "المعدات",
     description: "بيض طازج يومياً، يتم فحصه وتغليفه بأحدث الطرق الآلية.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDS81nhaUFll9w2mwoz6_bkU06emMLe6N5NUHOSCM3kaqsPIMHbNI2_8DQ7h1hqOwQecR9bGjPWkF9QrNmSkzUBxCRzfXjLPBYk0seQehmPbWPf8aX2scOcLSrdDJscekIgCYXCzHNk1ylhVSMrEKnsiR6R3I3xaVPKHSRRN_BMf-8pCM_0sKTtMNXtpiLRsVvMiitSHZhPrrezN8kSiTXC6sfm2-AEQe-lzORZYVTjm_N6zAoxzIcedeifNPVIgQ3-g6oDTo2hXCI",
@@ -44,7 +43,7 @@ const products = [
   {
     id: 5,
     slug: "hatching-eggs",
-    title: "بيض التفريخ",
+    title: "المتممات العلفية",
     description: "بيض مخصب عالي الجودة بنسب تفقيس ممتازة للمزارع والمفاقس.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuA3X36tCaBsNo3Mo890EdYDqTDWAOTuUHbu0PmVDBRDSF2_xOPvpkOonC-8-AKRt9CVXWAFOz_LGeYj3p_fO6OmVW1IY_6x4FB3ap7XCp4KhsJ5S-Yqvvyh85rbKTci0F3DM1PK56QU3nc-fGmS_T7FiONM7kV5J8XFgX4OLd-pLiaZZB9BBePEn6Fi-bfBEg51fjuxFOCio9ie0zx_IyAGpPuTy9jKfLdiKhLVeo_JGxMQObMDqGJkGZRERq_UonqoOg5bHc5ydE4",
@@ -53,7 +52,7 @@ const products = [
   {
     id: 6,
     slug: "broiler-farming",
-    title: "تربية الفروج",
+    title: "الاعلاف",
     description: "خدمات استشارية وإشرافية لمشاريع تربية الفروج لضمان الربحية.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBAx4H06mTPkMW16CzBEEYmREp7zciM8nvTk8_jshazOLWMyzunloTx-hn0jCopD12o5ERFr7SEPhRsXHOEHzmSA1VEGL_6Z4mPept3mQPF-zheBiypHgJsXYJkffqMCJIlz95Pevv_Ap0Xv2wgfE46o49dyG_Ig6DF3SPyMjLVA3DQuA2P5jeJL_TSZpH629WGbOQ7dpBJuEH8n9VpplPQkh8xp2CDBPolTngj2-QLRjO3tz1T1jwvQfzeCCF8siwDjPmR9kTp_oA",

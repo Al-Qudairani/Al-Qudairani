@@ -31,13 +31,18 @@ export default function Footer() {
                 <span className="text-gray-300">سوريا - حلب - الباب </span>
               </li>
               <li className="flex items-center justify-center gap-3">
-                <AddIcCallSharpIcon className="text-primary" fontSize="small" />
-                <span className="text-gray-300" dir="ltr">+963 11 123 4567</span>
+                <WhatsAppIcon className="text-primary" fontSize="small" />
+                <a
+                  href="https://wa.me/963989889025"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300"
+                  dir="ltr"
+                >
+                  +963 989 889 025
+                </a>
               </li>
-              <li className="flex items-center justify-center gap-3">
-                <AddIcCallSharpIcon className="text-primary" fontSize="small" />
-                <span className="text-gray-300" dir="ltr">+963 536 663 55 58</span>
-              </li>
+
               <li className="flex items-center justify-center gap-3">
                 <EmailSharpIcon className="text-primary" fontSize="small" />
                 <span className="text-gray-300">info@alqudairani.com</span>
@@ -49,7 +54,7 @@ export default function Footer() {
             <div className="flex items-center justify-center gap-4">
               <a
                 aria-label="WhatsApp"
-                href="https://wa.me/963111234567"
+                href="https://wa.me/963989889025"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-18 h-18 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-secondary transition-all shadow-md"
@@ -58,7 +63,7 @@ export default function Footer() {
               </a>
               <a
                 aria-label="Instagram"
-                href="#"
+                href="https://www.instagram.com/alqudairani.company?igsh=anloZXV4ejBldTg1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-18 h-18 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-secondary transition-all shadow-md"
@@ -67,22 +72,14 @@ export default function Footer() {
               </a>
               <a
                 aria-label="Facebook"
-                href="#"
+                href="https://www.facebook.com/share/1Xvs1a2ccJ/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-18 h-18 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-secondary transition-all shadow-md"
               >
                 <FacebookIcon fontSize="large" />
               </a>
-              <a
-                aria-label="WhatsApp 2"
-                href="https://wa.me/963536663558"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-18 h-18 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-secondary transition-all shadow-md"
-              >
-                <WhatsAppIcon fontSize="large" />
-              </a>
+
             </div>
           </div>
         </div>
