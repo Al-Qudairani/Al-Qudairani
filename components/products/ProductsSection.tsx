@@ -1,9 +1,13 @@
+'use client';
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState, useTransition } from "react";
 
 const products = [
   {
     id: 1,
+    slug: "broiler",
     title: "الدجاج اللاحم",
     description: "توفير أجود أنواع الدجاج اللاحم المربى في مزارع صحية وبأعلى المعايير.",
     image:
@@ -12,6 +16,7 @@ const products = [
   },
   {
     id: 2,
+    slug: "layers",
     title: "الدجاج البياض",
     description: "سلالات مميزة من الدجاج البياض ذات إنتاجية عالية ومناعة قوية.",
     image:
@@ -20,6 +25,7 @@ const products = [
   },
   {
     id: 3,
+    slug: "feeds",
     title: "الأعلاف",
     description: "تركيبات علفية متوازنة تضمن النمو السليم والإنتاجية العالية للطيور.",
     image:
@@ -28,6 +34,7 @@ const products = [
   },
   {
     id: 4,
+    slug: "table-eggs",
     title: "بيض المائدة",
     description: "بيض طازج يومياً، يتم فحصه وتغليفه بأحدث الطرق الآلية.",
     image:
@@ -36,6 +43,7 @@ const products = [
   },
   {
     id: 5,
+    slug: "hatching-eggs",
     title: "بيض التفريخ",
     description: "بيض مخصب عالي الجودة بنسب تفقيس ممتازة للمزارع والمفاقس.",
     image:
@@ -44,6 +52,7 @@ const products = [
   },
   {
     id: 6,
+    slug: "broiler-farming",
     title: "تربية الفروج",
     description: "خدمات استشارية وإشرافية لمشاريع تربية الفروج لضمان الربحية.",
     image:
@@ -52,6 +61,7 @@ const products = [
   },
   {
     id: 7,
+    slug: "medicines",
     title: "الأدوية واللقاحات",
     description: "مجموعة كاملة من التحصينات والأدوية البيطرية المعتمدة.",
     image:
@@ -60,6 +70,7 @@ const products = [
   },
   {
     id: 8,
+    slug: "supplies",
     title: "مستلزمات الدواجن",
     description: "كل ما تحتاجه مزارع الدواجن من معدات وأدوات وتجهيزات.",
     image:
@@ -69,6 +80,22 @@ const products = [
 ];
 
 export default function ProductsSection() {
+  const router = useRouter();
+  const [isNavigatingId, setIsNavigatingId] = useState<number | null>(null);
+  const [isPending, startTransition] = useTransition();
+
+  const handleViewDetails = (product: { id: number; slug: string }) => {
+    try {
+      const url = `/products/${product.slug}?id=${product.id}`;
+      startTransition(() => {
+        setIsNavigatingId(product.id);
+        router.prefetch(url);
+        router.push(url);
+      });
+    } catch (err) {
+      console.error("navigation_error", err);
+    }
+  };
   return (
     <section className="py-20 bg-background transition-colors duration-300 dark:bg-background-dark" id="products">
       <div className="container mx-auto px-4">
@@ -96,8 +123,18 @@ export default function ProductsSection() {
                 <h3 className="text-xl font-bold mb-3 text-secondary dark:text-primary-dark">{product.title}</h3>
                 <p className="text-foreground/70 dark:text-foreground/70 text-sm mb-4 line-clamp-2">{product.description}</p>
                 <Link
-                  href="#"
-                  className="relative overflow-hidden inline-flex items-center gap-2 text-sm font-bold bg-primary dark:bg-primary-dark text-card-dark px-4 py-2 rounded-md transition-colors duration-300 transition-transform hover:-translate-y-0.5 hover:scale-[1.02] focus:scale-[1.02] hover:bg-primary-dark dark:hover:bg-primary"
+                  href={`/products/${product.slug}?id=${product.id}`}
+                  onMouseEnter={() => {
+                    const url = `/products/${product.slug}?id=${product.id}`;
+                    router.prefetch(url);
+                  }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleViewDetails(product);
+                  }}
+                  aria-busy={isPending || isNavigatingId === product.id}
+                  role="button"
+                  className={`relative overflow-hidden inline-flex items-center gap-2 text-sm font-bold bg-primary dark:bg-primary-dark text-card-dark px-4 py-2 rounded-md transition-colors duration-300 transition-transform hover:-translate-y-0.5 hover:scale-[1.02] focus:scale-[1.02] hover:bg-primary-dark dark:hover:bg-primary ${isNavigatingId === product.id ? "opacity-70 cursor-wait" : ""}`}
                 >
                   <span>عرض التفاصيل</span>
                   <svg
