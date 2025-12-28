@@ -24,7 +24,7 @@ export default function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 place-items-center">
           <div className="text-center">
-            <h3 className="text-xl font-bold text-primary mb-6">تواصل معنا الآن!</h3>
+            <h3 className="text-xl font-bold text-primary mb-6">تواصل معنا الآن</h3>
             <ul className="space-y-4">
               <li className="flex items-center justify-center gap-3">
                 <LocationOnSharpIcon className="text-primary" fontSize="small" />
