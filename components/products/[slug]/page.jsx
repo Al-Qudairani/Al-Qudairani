@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import AddIcCallSharpIcon from '@mui/icons-material/AddIcCallSharp';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Footer from '../../footer/page';
 import data from '../data.json';
 import Link from 'next/link';
@@ -33,6 +34,9 @@ export default function ProductPage(props) {
       ? product.sections.map((sec) => ({ ...sec, image: sanitize(sec.image) }))
       : [],
   };
+  const primaryPhone = Array.isArray(product.phones) ? String(product.phones[0] || '') : '';
+  const telHref = `tel:${primaryPhone.replace(/[^+\d]/g, '')}`;
+  const waHref = `https://wa.me/${primaryPhone.replace(/[^\d]/g, '')}`;
 
   return (
     <main className="bg-background transition-colors duration-300 dark:bg-background-dark">
@@ -97,24 +101,29 @@ export default function ProductPage(props) {
           <div className="text-center mb-6">
             <span className="inline-block px-4 py-1 rounded-full bg-primary/15 text-primary font-bold">التواصل الخاص بالمنتج</span>
             <h2 className="mt-3 text-2xl md:text-3xl font-extrabold tracking-tight">تواصل معنا مباشرة</h2>
-            <p className="mt-2 text-foreground/70">الأرقام التالية مخصصة لهذا المنتج</p>
+            <p className="mt-2 text-foreground/70">رقم واحد بشكلين: اتصال مباشر وواتس آب</p>
           </div>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            {product.phones?.map((phone, idx) => {
-              const telHref = `tel:${phone.replace(/[^+\d]/g, '')}`;
-              return (
-                <a
-                  key={idx}
-                  href={telHref}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-secondary font-bold shadow-lg hover:bg-primary-dark transition-colors"
-                  dir="ltr"
-                >
-                  <AddIcCallSharpIcon fontSize="small" className="shrink-0" />
-                  <span>{phone}</span>
-                </a>
-              );
-            })}
-          </div>
+          {primaryPhone && (
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+              <a
+                href={telHref}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-secondary font-bold shadow-lg hover:bg-primary-dark transition-colors"
+                dir="ltr"
+              >
+                <AddIcCallSharpIcon fontSize="small" className="shrink-0" />
+                <span>{primaryPhone}</span>
+              </a>
+              <a
+                href={waHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-600 hover:bg-green-700 text-white shadow-lg transition-colors"
+                aria-label="WhatsApp"
+              >
+                <WhatsAppIcon fontSize="small" />
+              </a>
+            </div>
+          )}
         </div>
       </section>
 

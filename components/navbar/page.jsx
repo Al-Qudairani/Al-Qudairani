@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 import AddIcCallSharpIcon from '@mui/icons-material/AddIcCallSharp';
@@ -26,22 +27,22 @@ export default function Navbar() {
           </div>
         </div>
         <nav className="hidden md:flex gap-1 font-semibold text-foreground">
-          <a
+          <Link
             className="px-3 py-2 rounded-md bg-primary text-secondary transition-colors"
-            href="#"
+            href="/"
             aria-current="page"
           >
             الرئيسية
-          </a>
-          <a className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary transition-colors" href="#about">
+          </Link>
+          <Link className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary transition-colors" href="/#about">
             من نحن
-          </a>
-          <a className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary transition-colors" href="#products">
+          </Link>
+          <Link className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary transition-colors" href="/#products">
             منتجاتنا
-          </a>
-          <a className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary transition-colors" href="#contact">
+          </Link>
+          <Link className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary transition-colors" href="/#contact">
             اتصل بنا
-          </a>
+          </Link>
         </nav>
         <div className="flex items-center gap-4">
           <button
@@ -70,34 +71,34 @@ export default function Navbar() {
       <div className={`${open ? 'block' : 'hidden'} md:hidden bg-background border-t border-card-dark/20`} role="dialog" aria-modal="true">
         <div className="container mx-auto px-4 py-2">
           <div className="flex flex-col gap-3 font-semibold text-foreground">
-            <a
+            <Link
               className="px-4 py-2 rounded-md bg-primary text-secondary transition-colors"
-              href="#"
+              href="/"
               onClick={() => setOpen(false)}
             >
               الرئيسية
-            </a>
-            <a
+            </Link>
+            <Link
               className="px-4 py-2 rounded-md hover:bg-primary hover:text-secondary transition-colors"
-              href="#about"
+              href="/#about"
               onClick={() => setOpen(false)}
             >
               من نحن
-            </a>
-            <a
+            </Link>
+            <Link
               className="px-4 py-2 rounded-md hover:bg-primary hover:text-secondary transition-colors"
-              href="#products"
+              href="/#products"
               onClick={() => setOpen(false)}
             >
               منتجاتنا
-            </a>
-            <a
+            </Link>
+            <Link
               className="px-4 py-2 rounded-md hover:bg-primary hover:text-secondary transition-colors"
-              href="#contact"
+              href="/#contact"
               onClick={() => setOpen(false)}
             >
               اتصل بنا
-            </a>
+            </Link>
           </div>
         </div>
       </div>
