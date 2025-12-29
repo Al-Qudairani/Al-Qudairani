@@ -1,0 +1,169 @@
+{
+  "navbar": {
+    "alt": {
+      "logo": "Al-Qudairani Company logo"
+    },
+    "brand_name": "Al-Qudairani Company",
+    "brand_tagline": "Al-Qudairani Company (AL-QUDAIRANI COMPANY)",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "products": "Our Products",
+      "contact": "Contact Us"
+    },
+    "actions": {
+      "general_contact": "General Contact"
+    },
+    "aria": {
+      "go_home": "Go to Home",
+      "toggle_menu": "Toggle Menu",
+      "toggle_dark_mode": "Toggle Dark Mode",
+      "whatsapp_general": "WhatsApp for general contact"
+    }
+  },
+  "hero": {
+    "alt": {
+      "background": "Poultry farm background"
+    },
+    "badge": "Quality and trust are our motto",
+    "title": "Welcome to Al-Qudairani Company",
+    "title_emphasis": "Al-Qudairani Company",
+    "description": "Al-Qudairani Poultry—long-standing expertise in the Syrian market, delivering premium products and integrated services in the poultry sector",
+    "cta": {
+      "view_products": "View Our Products",
+      "learn_more": "Learn More"
+    }
+  },
+  "about": {
+    "section_label": "About Us",
+    "heading": "A rich history and a promising future in poultry farming",
+    "image_alt": "About Al-Qudairani Company",
+    "description": "Founded in 1984 with a clear vision to lead the poultry sector in Syria. We proudly offer high-quality products covering all local market needs—from fresh eggs to meats—while fully adhering to global health and safety standards.",
+    "highlights": [
+      "Years of extensive experience in the Syrian market",
+      "Modern technologies and a specialized team",
+      "Commitment to quality and sustainability",
+      "Reliable supply chain and modern packaging"
+    ],
+    "stats": {
+      "experience_years_label": "Years of Experience",
+      "partnerships_label": "Partnerships",
+      "support_label": "Support",
+      "customer_satisfaction_label": "Customer Satisfaction"
+    },
+    "actions": {
+      "contact": "Contact Us"
+    }
+  },
+  "products": {
+    "section_label": "What We Offer",
+    "heading": "Our Products and Services",
+    "cards": {
+      "table-eggs": {
+        "title": "Table Eggs",
+        "description": "Fresh eggs daily to the highest sorting and packaging standards."
+      },
+      "hatching-eggs": {
+        "title": "Hatching Eggs",
+        "description": "High-quality fertilized eggs with excellent hatch rates."
+      },
+      "poultry-meat": {
+        "title": "Poultry Meat",
+        "description": "Supplying poultry meat with guaranteed quality and sound cold chains."
+      },
+      "feeds": {
+        "title": "Feeds",
+        "description": "Balanced feed formulations for all age stages."
+      },
+      "medicines": {
+        "title": "Medicines & Vaccines",
+        "description": "Vaccinations and antibiotics under veterinary oversight with approved standards."
+      },
+      "broiler-chick": {
+        "title": "Broiler Chick",
+        "description": "Carefully selected broiler chicks for a sound productive start."
+      },
+      "equipment": {
+        "title": "Equipment",
+        "description": "Feeding, drinking, and ventilation equipment for poultry farms."
+      },
+      "additives": {
+        "title": "Feed Additives",
+        "description": "Vitamins, boosters, and antioxidants to enhance performance."
+      }
+    },
+    "actions": {
+      "view_details": "View Details"
+    }
+  },
+  "productDetail": {
+    "notFound": {
+      "title": "Product not found",
+      "description": "Check the link or return to the home page.",
+      "back_home": "Back to Home"
+    },
+    "hero": {
+      "section_label": "Product section"
+    },
+    "sections": {
+      "heading": "Sections related to this product",
+      "description": "A concise overview of the main sections and features"
+    },
+    "contact": {
+      "section_label": "Product-specific contact",
+      "heading": "Contact us directly",
+      "description": "One number in two ways: direct call and WhatsApp",
+      "direct_call": "Direct Call",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "whyUs": {
+    "section_label": "Our Values",
+    "heading": "Why choose Al-Qudairani?",
+    "description": "We commit to delivering the best to our customers and partners through our steadfast values",
+    "features": [
+      {
+        "icon": "verified_user",
+        "title": "Guaranteed Quality",
+        "desc": "We ensure product quality through strict control at every stage of production."
+      },
+      {
+        "icon": "local_shipping",
+        "title": "Fast Delivery",
+        "desc": "A wide distribution network covering all regions to ensure products arrive fresh."
+      },
+      {
+        "icon": "support_agent",
+        "title": "Continuous Support",
+        "desc": "Customer service and technical consultancy team ready around the clock."
+      }
+    ]
+  },
+  "partner": {
+    "section_label": "Our Partners",
+    "heading": "Strategic partnership to grow your business",
+    "description": "Whether you run a restaurant, hotel, or retail store, we offer tailored solutions that fit your business size, with competitive pricing and flexible supply schedules.",
+    "actions": {
+      "start_partnership": "Start Partnership Now"
+    },
+    "image_alt": "Partnership"
+  },
+  "footer": {
+    "brand_name": "Al-Qudairani Company",
+    "description": "One of the oldest poultry companies in Syria, providing all services and products related to poultry.",
+    "contact": {
+      "heading": "Contact Us Now",
+      "address": "Syria - Aleppo - Al-Bab",
+      "email": "info@alqudairani.com"
+    },
+    "social": {
+      "heading": "Follow us on social media!",
+      "labels": {
+        "whatsapp": "WhatsApp",
+        "instagram": "Instagram",
+        "facebook": "Facebook"
+      }
+    },
+    "copyright": "© 2026 Al-Qudairani Company. All rights reserved."
+  }
+}

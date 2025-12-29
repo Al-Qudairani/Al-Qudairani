@@ -1,0 +1,295 @@
+{
+  "ui": {
+    "notFound": {
+      "title": "Product not found",
+      "description": "Check the link or return to the home page.",
+      "back_home": "Back to Home"
+    },
+    "hero": {
+      "section_label": "Product section"
+    },
+    "sections": {
+      "heading": "Sections related to this product",
+      "description": "A concise overview of the main sections and features"
+    },
+    "contact": {
+      "section_label": "Product-specific contact",
+      "heading": "Contact us directly",
+      "description": "One number in two ways: direct call and WhatsApp",
+      "direct_call": "Direct Call",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "descriptions": {
+    "broiler": "Providing the finest broiler chicken raised in healthy farms to the highest standards.",
+    "layers": "Distinct layer chicken strains with high productivity and strong immunity.",
+    "feeds": "Balanced feed formulations that ensure proper growth and high productivity for birds.",
+    "table-eggs": "Fresh eggs daily, inspected and packaged using modern automated methods.",
+    "hatching-eggs": "High-quality fertilized eggs with excellent hatch rates for farms and hatcheries.",
+    "broiler-farming": "Consulting and supervisory services for broiler farming projects to ensure profitability.",
+    "medicines": "A complete range of approved veterinary vaccines and medicines.",
+    "supplies": "Everything poultry farms need—equipment, tools, and fittings.",
+    "poultry-meat": "Supplying poultry meat with guaranteed quality and sound cold chains.",
+    "broiler-chick": "Carefully selected broiler chicks for a sound productive start.",
+    "equipment": "Feeding, drinking, and ventilation equipment for poultry farms.",
+    "additives": "Vitamins, boosters, and antioxidants to enhance performance."
+  },
+  "products": {
+    "broiler": {
+      "slug": "broiler",
+      "name": "Broiler Chicken",
+      "hero": {
+        "alt": "Broiler Chicken"
+      },
+      "sections": [
+        {
+          "title": "Breed Selection",
+          "desc": "High-growth, high-performance strains to achieve excellent productivity."
+        },
+        {
+          "title": "Nutrition & Monitoring",
+          "desc": "Balanced feeding programs and continuous monitoring to increase weight efficiently."
+        },
+        {
+          "title": "Health & Vaccination",
+          "desc": "Approved vaccination schedules and routine checks to ensure flock safety."
+        }
+      ],
+      "phones": ["+963989889025"]
+    },
+    "layers": {
+      "slug": "layers",
+      "name": "Layer Chicken",
+      "hero": {
+        "alt": "Layer Chicken"
+      },
+      "sections": [
+        {
+          "title": "Flock Management",
+          "desc": "Optimizing environmental conditions to ensure stable egg production."
+        },
+        {
+          "title": "Selective Nutrition",
+          "desc": "Precise formulations to enhance shell quality and daily production."
+        },
+        {
+          "title": "Vaccination & Immunity",
+          "desc": "Tailored vaccine programs reduce disease rates and improve immunity."
+        }
+      ],
+      "phones": ["+963989889025"]
+    },
+    "feeds": {
+      "slug": "feeds",
+      "name": "Feeds",
+      "hero": {
+        "alt": "Feeds"
+      },
+      "sections": [
+        {
+          "title": "Broiler Feed",
+          "desc": "Formulations that support rapid growth and good feed conversion."
+        },
+        {
+          "title": "Layer Feed",
+          "desc": "Formulas that boost egg production and shell strength."
+        },
+        {
+          "title": "Breeder Feed",
+          "desc": "Customized blends for breeders to ensure fertility and flock health."
+        }
+      ],
+      "phones": ["+963985933335", "+963989889025"]
+    },
+    "table-eggs": {
+      "slug": "table-eggs",
+      "name": "Table Eggs",
+      "hero": {
+        "alt": "Table Eggs"
+      },
+      "sections": [
+        {
+          "title": "Crate-packed",
+          "desc": "Eggs packed in crates under inspection and quality standards."
+        },
+        {
+          "title": "Carton-packed",
+          "desc": "Eggs packed in cartons with safe packaging and approved standards."
+        }
+      ],
+      "phones": ["+963989889028", "+963989889025"]
+    },
+    "hatching-eggs": {
+      "slug": "hatching-eggs",
+      "name": "Hatching Eggs",
+      "hero": {
+        "alt": "Hatching Eggs"
+      },
+      "sections": [
+        {
+          "title": "Imported Eggs",
+          "desc": "Imported hatching eggs with certified quality and strict monitoring."
+        },
+        {
+          "title": "Local Eggs",
+          "desc": "Local hatching eggs with excellent fertility rates."
+        }
+      ],
+      "phones": ["+963989889025"]
+    },
+    "broiler-farming": {
+      "slug": "broiler-farming",
+      "name": "Broiler Farming",
+      "hero": {
+        "alt": "Broiler Farming"
+      },
+      "sections": [
+        {
+          "title": "Barn Design",
+          "desc": "Ventilation and thermal insulation solutions that reduce stress and improve performance."
+        },
+        {
+          "title": "Management Programs",
+          "desc": "Operating schedules and monitoring to raise productivity and reduce costs."
+        },
+        {
+          "title": "Technical Consulting",
+          "desc": "Ongoing technical support to improve feed conversion rates."
+        }
+      ],
+      "phones": ["+963989889025"]
+    },
+    "medicines": {
+      "slug": "medicines",
+      "name": "Medicines & Vaccines",
+      "hero": {
+        "alt": "Medicines & Vaccines"
+      },
+      "sections": [
+        {
+          "title": "Core Vaccinations",
+          "desc": "Vaccination schedules covering common poultry diseases."
+        },
+        {
+          "title": "Selective Antibiotics",
+          "desc": "Safe and effective choices under veterinary supervision."
+        },
+        {
+          "title": "Immune Support",
+          "desc": "Supplements to enhance disease resistance and reduce stress."
+        }
+      ],
+      "phones": ["+963989889025"]
+    },
+    "supplies": {
+      "slug": "supplies",
+      "name": "Poultry Supplies",
+      "hero": {
+        "alt": "Poultry Supplies"
+      },
+      "sections": [
+        {
+          "title": "Feeding Equipment",
+          "desc": "Modern tools for efficient feed distribution."
+        },
+        {
+          "title": "Drinking Systems",
+          "desc": "Automatic drinking systems that reduce waste and ensure water cleanliness."
+        },
+        {
+          "title": "Heating & Ventilation",
+          "desc": "Environmental solutions to keep birds comfortable."
+        }
+      ],
+      "phones": ["+963989889025"]
+    },
+    "equipment": {
+      "slug": "equipment",
+      "name": "Equipment",
+      "hero": {
+        "alt": "Equipment"
+      },
+      "sections": [
+        {
+          "title": "Feeding Equipment",
+          "desc": "Modern tools for efficient feed distribution."
+        },
+        {
+          "title": "Drinking Systems",
+          "desc": "Automatic drinking systems that reduce waste and ensure water cleanliness."
+        },
+        {
+          "title": "Heating & Ventilation",
+          "desc": "Environmental solutions to keep birds comfortable."
+        }
+      ],
+      "phones": ["+963989889025"]
+    },
+    "poultry-meat": {
+      "slug": "poultry-meat",
+      "name": "Poultry Meat",
+      "hero": {
+        "alt": "Poultry Meat"
+      },
+      "sections": [
+        {
+          "title": "Fresh Chicken",
+          "desc": "Daily supply of fresh chicken with commitment to safety standards."
+        },
+        {
+          "title": "Frozen Chicken",
+          "desc": "Products frozen along cold chains that maintain quality."
+        },
+        {
+          "title": "Live Chicken",
+          "desc": "Providing live chicken under transport and care requirements."
+        }
+      ],
+      "phones": ["+963989889012", "+963989889025"]
+    },
+    "broiler-chick": {
+      "slug": "broiler-chick",
+      "name": "Broiler Chick",
+      "hero": {
+        "alt": "Broiler Chick"
+      },
+      "sections": [
+        {
+          "title": "Breed Selection",
+          "desc": "Fast-growing strains with high health."
+        },
+        {
+          "title": "Initial Care",
+          "desc": "Heating and feeding programs for a sound start."
+        },
+        {
+          "title": "Early Vaccination",
+          "desc": "Vaccination plans that reduce disease rates."
+        }
+      ],
+      "phones": ["+963 993 982 582", "+963989889025"]
+    },
+    "additives": {
+      "slug": "additives",
+      "name": "Feed Additives",
+      "hero": {
+        "alt": "Feed Additives"
+      },
+      "sections": [
+        {
+          "title": "Premix",
+          "desc": "Ready blends of micro-elements to support performance."
+        },
+        {
+          "title": "Vitamins",
+          "desc": "Supplements to boost immunity and growth."
+        },
+        {
+          "title": "Minerals",
+          "desc": "Essential minerals to improve health and production."
+        }
+      ],
+      "phones": ["+963989889025"]
+    }
+  }
+}
