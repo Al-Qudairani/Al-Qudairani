@@ -192,7 +192,7 @@
       {
         "title": "معدات التغذية",
         "desc": "أدوات حديثة لتوزيع العلف بكفاءة.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDViUWcOeUG5GzfzbL9Vj2F9م3CWv9JhEkLo6Ud2J4qHbCHpGsRYgNKB_R2q7HLSWhDi54IUSfHWWOE4نQQXhMZ_VvpnNyمlhZjfCB94XT6MFHiaPkkUyfxIpMMMuakw9نGUg06KqMZnUmfDAFkncON_-5Dzم7Fk9aW6yxYQOKIADرPIxx8xEfJkAjCL8popمkv7wdgK2KfxcQIg_RL5AsRl8Za4زHEjكSwi4aR9UERHrج-jiqkkO_Gfflيي7pHcB5GegyIXJ22B8"
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDViUWcOeUG5GzfzbL9Vj2F9M3CWv9JhEkLo6Ud2J4qHbCHpGsRYgNKB_R2q7HLSWhDi54IUSfHWWOE4NQQXhMZ_VvpnNyMlhZjfCB94XT6MFHiaPkkUyfxIpMMMuakw9nGUg06KqMZnUmfDAFkncON_-5DzM7Fk9aW6yxYQOKIADrPIxx8xEfJkAjCL8popmkv7wdgK2KfxcQIg_RL5AsRl8Za4zHEjKkSwi4aR9UERHrj-jiqkkO_GfflYy7pHcB5GegyIXJ22B8"
       },
       {
         "title": "أنظمة الشرب",
@@ -203,6 +203,110 @@
         "title": "التدفئة والتهوية",
         "desc": "حلول بيئية للحفاظ على راحة الطيور.",
         "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDViUWcOeUG5GzfzbL9Vj2F9M3CWv9JhEkLo6Ud2J4qHbCHpGsRYgNKB_R2q7HLSWhDi54IUSfHWWOE4NQQXhMZ_VvpnNyMlhZjfCB94XT6MFHiaPkkUyfxIpMMMuakw9nGUg06KqMZnUmfDAFkncON_-5DzM7Fk9aW6yxYQOKIADrPIxx8xEfJkAjCL8popmkv7wdgK2KfxcQIg_RL5AsRl8Za4zHEjKkSwi4aR9UERHrj-jiqkkO_GfflYy7pHcB5GegyIXJ22B8"
+      }
+    ],
+    "phones": ["+963 11 123 4567", "+963 536 663 55 58"]
+  },
+  "equipment": {
+    "slug": "equipment",
+    "name": "معدات",
+    "hero": {
+      "image": "/icons/3.png",
+      "alt": "معدات"
+    },
+    "sections": [
+      {
+        "title": "معدات التغذية",
+        "desc": "أدوات حديثة لتوزيع العلف بكفاءة.",
+        "image": "/icons/3.png"
+      },
+      {
+        "title": "أنظمة الشرب",
+        "desc": "حوامل شرب آلية تقلل الهدر وتضمن نظافة المياه.",
+        "image": "/icons/3.png"
+      },
+      {
+        "title": "التدفئة والتهوية",
+        "desc": "حلول بيئية للحفاظ على راحة الطيور.",
+        "image": "/icons/3.png"
+      }
+    ],
+    "phones": ["+963 11 123 4567", "+963 536 663 55 58"]
+  },
+  "poultry-meat": {
+    "slug": "poultry-meat",
+    "name": "لحوم الدواجن",
+    "hero": {
+      "image": "/icons/4.png",
+      "alt": "لحوم الدواجن"
+    },
+    "sections": [
+      {
+        "title": "الذبح والمعالجة",
+        "desc": "معايير تشغيلية لضمان جودة اللحم ونظافته.",
+        "image": "/icons/4.png"
+      },
+      {
+        "title": "التبريد والتغليف",
+        "desc": "سلاسل تبريد وتغليف تحافظ على الطزاجة.",
+        "image": "/icons/4.png"
+      },
+      {
+        "title": "معايير السلامة",
+        "desc": "التزام بالاشتراطات الصحية المعتمدة.",
+        "image": "/icons/4.png"
+      }
+    ],
+    "phones": ["+963 11 123 4567", "+963 536 663 55 58"]
+  },
+  "broiler-chick": {
+    "slug": "broiler-chick",
+    "name": "صوص لاحم",
+    "hero": {
+      "image": "/icons/chik.jpg",
+      "alt": "صوص لاحم"
+    },
+    "sections": [
+      {
+        "title": "اختيار السلالات",
+        "desc": "سلالات ذات نمو سريع وصحة عالية.",
+        "image": "/icons/chik.jpg"
+      },
+      {
+        "title": "رعاية أولية",
+        "desc": "برامج تدفئة وتغذية لبداية سليمة.",
+        "image": "/icons/chik.jpg"
+      },
+      {
+        "title": "تحصين مبكر",
+        "desc": "خطط تحصين تقلل نسب الأمراض.",
+        "image": "/icons/chik.jpg"
+      }
+    ],
+    "phones": ["+963 11 123 4567", "+963 536 663 55 58"]
+  },
+  "additives": {
+    "slug": "additives",
+    "name": "متممات علفية",
+    "hero": {
+      "image": "/icons/13.png",
+      "alt": "متممات علفية"
+    },
+    "sections": [
+      {
+        "title": "فيتامينات ومعادن",
+        "desc": "دعم غذائي لتحسين المناعة والأداء.",
+        "image": "/icons/13.png"
+      },
+      {
+        "title": "محفزات نمو",
+        "desc": "تركيبات تساعد على تحسين التحويل الغذائي.",
+        "image": "/icons/13.png"
+      },
+      {
+        "title": "مضادات أكسدة",
+        "desc": "تقليل الإجهاد التأكسدي ورفع الحيوية.",
+        "image": "/icons/13.png"
       }
     ],
     "phones": ["+963 11 123 4567", "+963 536 663 55 58"]
