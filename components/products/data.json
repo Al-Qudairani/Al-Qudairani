@@ -60,18 +60,18 @@
     },
     "sections": [
       {
-        "title": "تركيبات متوازنة",
-        "desc": "صيغ غذائية مدروسة تدعم النمو والصحة.",
+        "title": "علف دجاج لاحم",
+        "desc": "تركيبات تدعم النمو السريع والتحويل الغذائي الجيد.",
         "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAp3ohUqYBAnNe96CtxsjPIoONRutng-41oXazhWK0IXNkj1VFop_4Ku7_j4h1_J--MOEnDjRfuAe_6nTRhSvhiDlzBaHOhlFfU9pivayhmUAjDSghweMGY4WokS6OJIhnrvYJhXSDHf9MjuA3o9X1L2PmxusRlCuT-KAYNbYtubURHZ13vEvMjfNNiBnrCUC-o-IPEwLVKqTsBbSO-IqcQCfG9Y4uDU2YcfJgwhQMSpRsfVZUREVn3ifiBKDs-CE17S6WRAc2i64A"
       },
       {
-        "title": "جودة المواد الخام",
-        "desc": "اختبارات صارمة لضمان مصدر آمن ومغذٍ.",
+        "title": "علف دجاج بيض",
+        "desc": "صيغ تعزز إنتاج البيض وقوة القشرة.",
         "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAp3ohUqYBAnNe96CtxsjPIoONRutng-41oXazhWK0IXNkj1VFop_4Ku7_j4h1_J--MOEnDjRfuAe_6nTRhSvhiDlzBaHOhlFfU9pivayhmUAjDSghweMGY4WokS6OJIhnrvYJhXSDHf9MjuA3o9X1L2PmxusRlCuT-KAYNbYtubURHZ13vEvMjfNNiBnrCUC-o-IPEwLVKqTsBbSO-IqcQCfG9Y4uDU2YcfJgwhQMSpRsfVZUREVn3ifiBKDs-CE17S6WRAc2i64A"
       },
       {
-        "title": "برامج عمرية",
-        "desc": "خطط تغذية لكل عمر لضمان أداء أمثل.",
+        "title": "علف دجاج أمهات",
+        "desc": "خلائط مخصصة للأمهات لضمان خصوبة وصحة القطيع.",
         "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAp3ohUqYBAnNe96CtxsjPIoONRutng-41oXazhWK0IXNkj1VFop_4Ku7_j4h1_J--MOEnDjRfuAe_6nTRhSvhiDlzBaHOhlFfU9pivayhmUAjDSghweMGY4WokS6OJIhnrvYJhXSDHf9MjuA3o9X1L2PmxusRlCuT-KAYNbYtubURHZ13vEvMjfNNiBnrCUC-o-IPEwLVKqTsBbSO-IqcQCfG9Y4uDU2YcfJgwhQMSpRsfVZUREVn3ifiBKDs-CE17S6WRAc2i64A"
       }
     ],
@@ -86,18 +86,13 @@
     },
     "sections": [
       {
-        "title": "فرز وتغليف",
-        "desc": "أنظمة آلية لضمان الجودة والتوحيد.",
+        "title": "كرستان مغلف",
+        "desc": "بيض مغلف ضمن كرستان بمعايير فحص وجودة.",
         "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDS81nhaUFll9w2mwoz6_bkU06emMLe6N5NUHOSCM3kaqsPIMHbNI2_8DQ7h1hqOwQecR9bGjPWkF9QrNmSkzUBxCRzfXjLPBYk0seQehmPbWPf8aX2scOcLSrdDJscekIgCYXCzHNk1ylhVSMrEKnsiR6R3I3xaVPKHSRRN_BMf-8pCM_0sKTtMNXtpiLRsVvMiitSHZhPrrezN8kSiTXC6sfm2-AEQe-lzORZYVTjm_N6zAoxzIcedeifNPVIgQ3-g6oDTo2hXCI"
       },
       {
-        "title": "ضمان الطزاجة",
-        "desc": "توريد يومي وخطوط باردة للحفاظ على الجودة.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDS81nhaUFll9w2mwoz6_bkU06emMLe6N5NUHOSCM3kaqsPIMHbNI2_8DQ7h1hqOwQecR9bGjPWkF9QrNmSkzUBxCRzfXjLPBYk0seQehmPbWPf8aX2scOcLSrdDJscekIgCYXCzHNk1ylhVSMrEKnsiR6R3I3xaVPKHSRRN_BMf-8pCM_0sKTtMNXtpiLRsVvMiitSHZhPrrezN8kSiTXC6sfm2-AEQe-lzORZYVTjm_N6zAoxzIcedeifNPVIgQ3-g6oDTo2hXCI"
-      },
-      {
-        "title": "معايير السلامة",
-        "desc": "فحوصات دورية وفق المعايير الصحية المعتمدة.",
+        "title": "كرتون مغلف",
+        "desc": "بيض مغلف في كرتون بتغليف آمن ومعايير معتمدة.",
         "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDS81nhaUFll9w2mwoz6_bkU06emMLe6N5NUHOSCM3kaqsPIMHbNI2_8DQ7h1hqOwQecR9bGjPWkF9QrNmSkzUBxCRzfXjLPBYk0seQehmPbWPf8aX2scOcLSrdDJscekIgCYXCzHNk1ylhVSMrEKnsiR6R3I3xaVPKHSRRN_BMf-8pCM_0sKTtMNXtpiLRsVvMiitSHZhPrrezN8kSiTXC6sfm2-AEQe-lzORZYVTjm_N6zAoxzIcedeifNPVIgQ3-g6oDTo2hXCI"
       }
     ],
@@ -112,18 +107,13 @@
     },
     "sections": [
       {
-        "title": "اختبارات الخصوبة",
-        "desc": "قياسات دورية لضمان نسب تفقيس عالية.",
+        "title": "بيض مستورد",
+        "desc": "بيض تفقيس مستورد بجودة معتمدة ومراقبة صارمة.",
         "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA3X36tCaBsNo3Mo890EdYDqTDWAOTuUHbu0PmVDBRDSF2_xOPvpkOonC-8-AKRt9CVXWAFOz_LGeYj3p_fO6OmVW1IY_6x4FB3ap7XCp4KhsJ5S-Yqvvyh85rbKTci0F3DM1PK56QU3nc-fGmS_T7FiONM7kV5J8XFgX4OLd-pLiaZZB9BBePEn6Fi-bfBEg51fjuxFOCio9ie0zx_IyAGpPuTy9jKfLdiKhLVeo_JGxMQObMDqGJkGZRERq_UonqoOg5bHc5ydE4"
       },
       {
-        "title": "مراقبة التخزين",
-        "desc": "درجات حرارة ورطوبة مثالية للحفاظ على الجودة.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA3X36tCaBsNo3Mo890EdYDqTDWAOTuUHbu0PmVDBRDSF2_xOPvpkOonC-8-AKRt9CVXWAFOz_LGeYj3p_fO6OmVW1IY_6x4FB3ap7XCp4KhsJ5S-Yqvvyh85rbKTci0F3DM1PK56QU3nc-fGmS_T7FiONM7kV5J8XFgX4OLd-pLiaZZB9BBePEn6Fi-bfBEg51fjuxFOCio9ie0zx_IyAGpPuTy9jKfLdiKhLVeo_JGxMQObMDqGJkGZRERq_UonqoOg5bHc5ydE4"
-      },
-      {
-        "title": "التفريخ والمفاقس",
-        "desc": "معايير تشغيلية لضمان ولادات سليمة ومتجانسة.",
+        "title": "بيض محلي",
+        "desc": "بيض تفقيس محلي بنسب خصوبة ممتازة.",
         "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA3X36tCaBsNo3Mo890EdYDqTDWAOTuUHbu0PmVDBRDSF2_xOPvpkOonC-8-AKRt9CVXWAFOz_LGeYj3p_fO6OmVW1IY_6x4FB3ap7XCp4KhsJ5S-Yqvvyh85rbKTci0F3DM1PK56QU3nc-fGmS_T7FiONM7kV5J8XFgX4OLd-pLiaZZB9BBePEn6Fi-bfBEg51fjuxFOCio9ie0zx_IyAGpPuTy9jKfLdiKhLVeo_JGxMQObMDqGJkGZRERq_UonqoOg5bHc5ydE4"
       }
     ],
@@ -242,18 +232,18 @@
     },
     "sections": [
       {
-        "title": "الذبح والمعالجة",
-        "desc": "معايير تشغيلية لضمان جودة اللحم ونظافته.",
+        "title": "دجاج طازج",
+        "desc": "توريد دجاج طازج يومي مع التزام بمعايير السلامة.",
         "image": "/icons/4.png"
       },
       {
-        "title": "التبريد والتغليف",
-        "desc": "سلاسل تبريد وتغليف تحافظ على الطزاجة.",
+        "title": "دجاج مجمد",
+        "desc": "منتجات مجمدة وفق سلاسل تبريد تراعي الجودة.",
         "image": "/icons/4.png"
       },
       {
-        "title": "معايير السلامة",
-        "desc": "التزام بالاشتراطات الصحية المعتمدة.",
+        "title": "دجاج حي",
+        "desc": "توفير دجاج حي وفق اشتراطات النقل والرعاية.",
         "image": "/icons/4.png"
       }
     ],
@@ -294,18 +284,18 @@
     },
     "sections": [
       {
-        "title": "فيتامينات ومعادن",
-        "desc": "دعم غذائي لتحسين المناعة والأداء.",
+        "title": "بريمكس",
+        "desc": "خلائط جاهزة من العناصر الدقيقة لدعم الأداء.",
         "image": "/icons/13.png"
       },
       {
-        "title": "محفزات نمو",
-        "desc": "تركيبات تساعد على تحسين التحويل الغذائي.",
+        "title": "فتامينات",
+        "desc": "مكملات لتعزيز المناعة والنمو.",
         "image": "/icons/13.png"
       },
       {
-        "title": "مضادات أكسدة",
-        "desc": "تقليل الإجهاد التأكسدي ورفع الحيوية.",
+        "title": "معادن",
+        "desc": "عناصر معدنية أساسية لتحسين الصحة والإنتاج.",
         "image": "/icons/13.png"
       }
     ],
