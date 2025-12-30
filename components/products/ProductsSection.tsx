@@ -66,11 +66,11 @@ export default function ProductsSection() {
           <h2 className="text-4xl font-bold text-foreground">{t("products.heading")}</h2>
           <div className="w-24 h-1 bg-primary dark:bg-primary-dark mx-auto mt-4 rounded-full"></div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-card-light dark:bg-card-dark rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group border-b-4 border-primary dark:border-primary-dark"
+              className="bg-card-light dark:bg-card-dark rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group border-b-4 border-primary dark:border-primary-dark flex flex-col h-full min-h-[380px]"
             >
               <div className="h-48 overflow-hidden relative">
                 <Image
@@ -81,9 +81,9 @@ export default function ProductsSection() {
                   className="object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <h3 className="text-xl font-bold mb-3 text-secondary dark:text-primary-dark">{product.title}</h3>
-                <p className="text-foreground/70 dark:text-foreground/70 text-sm mb-4 line-clamp-2">{product.description}</p>
+                <p className="text-foreground/70 dark:text-foreground/70 text-sm mb-4 line-clamp-2 min-h-[3.5rem]">{product.description}</p>
                 <Link
                   href={`/products/${product.slug}?id=${product.id}`}
                   onMouseEnter={() => {
@@ -96,7 +96,7 @@ export default function ProductsSection() {
                   }}
                   aria-busy={isPending || isNavigatingId === product.id}
                   role="button"
-                  className={`relative overflow-hidden inline-flex items-center gap-2 text-sm font-bold bg-primary dark:bg-primary-dark text-card-dark px-4 py-2 rounded-md transition-colors duration-300 transition-transform hover:-translate-y-0.5 hover:scale-[1.02] focus:scale-[1.02] hover:bg-primary-dark dark:hover:bg-primary ${isNavigatingId === product.id ? "opacity-70 cursor-wait" : ""}`}
+                  className={`mt-auto w-1/2 relative overflow-hidden inline-flex items-center gap-2 text-sm font-bold bg-primary dark:bg-primary-dark text-card-dark px-4 py-2 rounded-md transition-colors duration-300 transition-transform hover:-translate-y-0.5 hover:scale-[1.02] focus:scale-[1.02] hover:bg-primary-dark dark:hover:bg-primary ${isNavigatingId === product.id ? "opacity-70 cursor-wait" : ""}`}
                 >
                   <span>{t("products.actions.view_details")}</span>
                   <svg
