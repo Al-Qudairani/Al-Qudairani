@@ -116,7 +116,7 @@ export default function Navbar() {
             }}
           >
             <NightsStaySharpIcon
-              className={`${iconClass} ${isDark ? 'text-black' : 'text-white'}`}
+              className={`${iconClass} ${isDark ? 'text-white' : 'text-black'}`}
             />
           </button>
 
