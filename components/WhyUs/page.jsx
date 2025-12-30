@@ -1,21 +1,7 @@
+import { useI18n } from "@/i18n/I18nProvider";
 export default function WhyUs() {
-  const features = [
-    {
-      icon: "verified_user",
-      title: "جودة مضمونة",
-      desc: "نضمن جودة منتجاتنا من خلال رقابة صارمة في جميع مراحل الإنتاج.",
-    },
-    {
-      icon: "local_shipping",
-      title: "توصيل سريع",
-      desc: "شبكة توزيع واسعة تغطي كافة المناطق لضمان وصول المنتجات طازجة.",
-    },
-    {
-      icon: "support_agent",
-      title: "دعم مستمر",
-      desc: "فريق خدمة عملاء واستشارات فنية جاهز لخدمتكم على مدار الساعة.",
-    },
-  ];
+  const { t, messages } = useI18n();
+  const features = messages?.whyUs?.features || [];
 
   return (
     <section id="whyus" className="relative py-24 bg-secondary text-white overflow-hidden">
@@ -26,12 +12,10 @@ export default function WhyUs() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1 rounded-full bg-primary/15 text-primary font-bold">قيمنا</span>
-          <h2 className="mt-4 text-3xl md:text-4xl font-extrabold tracking-tight">لماذا تختار القديراني؟</h2>
+          <span className="inline-block px-4 py-1 rounded-full bg-primary/15 text-primary font-bold">{t("whyUs.section_label")}</span>
+          <h2 className="mt-4 text-3xl md:text-4xl font-extrabold tracking-tight">{t("whyUs.heading")}</h2>
           <div className="mx-auto w-24 h-1 bg-primary mt-4 rounded-full"></div>
-          <p className="mt-6 text-gray-300 max-w-2xl mx-auto">
-            نلتزم بتقديم الأفضل لعملائنا وشركائنا من خلال قيمنا الراسخة
-          </p>
+          <p className="mt-6 text-gray-300 max-w-2xl mx-auto">{t("whyUs.description")}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

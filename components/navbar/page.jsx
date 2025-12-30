@@ -6,14 +6,16 @@ import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 import AddIcCallSharpIcon from '@mui/icons-material/AddIcCallSharp';
 import NightsStaySharpIcon from '@mui/icons-material/NightsStaySharp';
 import DisabledByDefaultSharpIcon from '@mui/icons-material/DisabledByDefaultSharp';
+import GTranslateIcon from '@mui/icons-material/GTranslate';
 import { usePathname, useRouter } from 'next/navigation';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { useI18n } from '@/i18n/I18nProvider';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
+  const { t, locale, setLocale } = useI18n();
   const handleNav = (section) => {
     try {
       if (pathname === '/') {
@@ -31,17 +33,17 @@ export default function Navbar() {
     <header className="fixed w-full top-0 z-50 bg-background/90 backdrop-blur-md shadow-md border-b-4 border-primary">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center gap-1">
-          <Link href="/" aria-label="الانتقال إلى الرئيسية" className="flex items-center gap-1">
+          <Link href="/" aria-label={t('navbar.aria.go_home')} className="flex items-center gap-1">
             <Image
-              alt="Al-Qudairani Company Logo"
+              alt={t('navbar.alt.logo')}
               className="h-20 w-auto object-contain"
               src="/icons/13.png"
               width={100}
               height={100}
             />
             <div className="">
-              <h1 className="text-xl font-bold text-primary-dark">شركة القديراني</h1>
-              <p className="text-xs text-foreground">AL-QUDAIRANI COMPANY</p>
+              <h1 className="text-xl font-bold text-primary-dark">{t('navbar.brand_name')}</h1>
+              <p className="text-xs text-foreground">{t('navbar.brand_tagline')}</p>
             </div>
           </Link>
         </div>
@@ -51,29 +53,29 @@ export default function Navbar() {
             href="/"
             aria-current="page"
           >
-            الرئيسية
+            {t('navbar.nav.home')}
           </Link>
           <Link className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary transition-colors" href="/#about" onClick={(e) => { e.preventDefault(); handleNav('about'); }}>
-            من نحن
+            {t('navbar.nav.about')}
           </Link>
           <Link className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary transition-colors" href="/#products" onClick={(e) => { e.preventDefault(); handleNav('products'); }}>
-            منتجاتنا
+            {t('navbar.nav.products')}
           </Link>
           <Link className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary transition-colors" href="/#contact" onClick={(e) => { e.preventDefault(); handleNav('contact'); }}>
-            اتصل بنا
+            {t('navbar.nav.contact')}
           </Link>
         </nav>
         <div className="flex items-center gap-4">
           <button
             className="p-2 md:hidden rounded-md bg-card-light hover:bg-card-dark/10 text-secondary dark:text-white transition-colors"
-            aria-label="Toggle menu"
+            aria-label={t('navbar.aria.toggle_menu')}
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <DisabledByDefaultSharpIcon fontSize="small" /> : <MenuSharpIcon fontSize="small" />}
           </button>
           <button
             className="p-2 rounded-full hover:bg-card-light dark:hover:bg-card-dark transition-colors"
-            aria-label="Toggle dark mode"
+            aria-label={t('navbar.aria.toggle_dark_mode')}
             onClick={() => {
               document.documentElement.classList.toggle('dark');
               setIsDark((v) => !v);
@@ -81,16 +83,24 @@ export default function Navbar() {
           >
             <NightsStaySharpIcon fontSize="large" className={isDark ? 'text-primary-dark cursor-pointer' : 'text-background-dark cursor-pointer'} />
           </button>
+          <button
+            className="p-2 rounded-full hover:bg-card-light dark:hover:bg-card-dark transition-colors"
+            aria-label="تبديل اللغة"
+            title="تبديل اللغة"
+            onClick={() => setLocale(locale === 'ar' ? 'en' : 'ar')}
+          >
+            <GTranslateIcon fontSize="large" className="text-primary-dark cursor-pointer" />
+          </button>
           <button className="hidden md:inline-flex items-center justify-center gap-2 bg-primary cursor-pointer hover:bg-primary-dark text-secondary font-bold py-4 px-8 rounded-md shadow-lg transition-all transform hover:scale-105 leading-none">
             <AddIcCallSharpIcon fontSize="small" className="shrink-0" />
             <span>
               <a
-                aria-label="WhatsApp General Contact"
+                aria-label={t('navbar.aria.whatsapp_general')}
                 href="https://wa.me/963989889025"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>تواصل عام</span>
+                <span>{t('navbar.actions.general_contact')}</span>
               </a>
             </span>
           </button>
@@ -105,28 +115,28 @@ export default function Navbar() {
               href="/"
               onClick={() => setOpen(false)}
             >
-              الرئيسية
+              {t('navbar.nav.home')}
             </Link>
             <Link
               className="px-4 py-2 rounded-md hover:bg-primary hover:text-secondary transition-colors"
               href="/#about"
               onClick={(e) => { e.preventDefault(); handleNav('about'); }}
             >
-              من نحن
+              {t('navbar.nav.about')}
             </Link>
             <Link
               className="px-4 py-2 rounded-md hover:bg-primary hover:text-secondary transition-colors"
               href="/#products"
               onClick={(e) => { e.preventDefault(); handleNav('products'); }}
             >
-              منتجاتنا
+              {t('navbar.nav.products')}
             </Link>
             <Link
               className="px-4 py-2 rounded-md hover:bg-primary hover:text-secondary transition-colors"
               href="/#contact"
               onClick={(e) => { e.preventDefault(); handleNav('contact'); }}
             >
-              اتصل بنا
+              {t('navbar.nav.contact')}
             </Link>
           </div>
         </div>

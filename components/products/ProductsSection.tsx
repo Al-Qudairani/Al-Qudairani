@@ -3,78 +3,35 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
+import { useI18n } from "@/i18n/I18nProvider";
 
-const products = [
-  {
-    id: 1,
-    slug: "table-eggs",
-    title: "بيض مائدة",
-    description: "بيض طازج يومياً وفق أعلى معايير الفرز والتغليف.",
-    image: "/icons/whiteEgg.png",
-    alt: "Table Eggs",
-  },
-  {
-    id: 2,
-    slug: "hatching-eggs",
-    title: "بيض تفقيس",
-    description: "بيض مخصب عالي الجودة بنِسَب تفقيس ممتازة.",
-    image: "/icons/8.png",
-    alt: "Hatching Eggs",
-  },
-  {
-    id: 3,
-    slug: "poultry-meat",
-    title: "لحوم دواجن",
-    description: "توريد لحوم دواجن بجودة مضمونة وسلاسل تبريد سليمة.",
-    image: "/icons/4.png",
-    alt: "Poultry Meat",
-  },
-  {
-    id: 4,
-    slug: "feeds",
-    title: "أعلاف",
-    description: "تركيبات علفية متوازنة لكل المراحل العمرية.",
-    image: "/icons/3.png",
-    alt: "Feeds",
-  },
-  {
-    id: 5,
-    slug: "medicines",
-    title: "أدوية ولقاحات",
-    description: "تحصينات ومضادات تحت إشراف بيطري ومعايير معتمدة.",
-    image: "/icons/13.png",
-    alt: "Medicines & Vaccines",
-  },
-  {
-    id: 6,
-    slug: "broiler-chick",
-    title: "صوص لاحم",
-    description: "صوص لاحم مختار بعناية لبداية إنتاجية سليمة.",
-    image: "/icons/chik.jpg",
-    alt: "Broiler Chick",
-  },
-  {
-    id: 7,
-    slug: "equipment",
-    title: "معدات",
-    description: "معدات تغذية وشرب وتهوية لمزارع الدواجن.",
-    image: "/icons/3.png",
-    alt: "Equipment",
-  },
-  {
-    id: 8,
-    slug: "additives",
-    title: "متممات علفية",
-    description: "فيتامينات ومحفزات ومضادات أكسدة لرفع الأداء.",
-    image: "/icons/13.png",
-    alt: "Feed Additives",
-  },
-];
+const slugs = [
+  "table-eggs",
+  "hatching-eggs",
+  "poultry-meat",
+  "feeds",
+  "medicines",
+  "broiler-chick",
+  "equipment",
+  "additives",
+] as const;
+
+const images: Record<string, string> = {
+  "table-eggs": "/icons/whiteEgg.png",
+  "hatching-eggs": "/icons/8.png",
+  "poultry-meat": "/icons/4.png",
+  feeds: "/icons/3.png",
+  medicines: "/icons/13.png",
+  "broiler-chick": "/icons/chik.jpg",
+  equipment: "/icons/3.png",
+  additives: "/icons/13.png",
+};
 
 export default function ProductsSection() {
   const router = useRouter();
   const [isNavigatingId, setIsNavigatingId] = useState<number | null>(null);
   const [isPending, startTransition] = useTransition();
+  const { t } = useI18n();
 
   const handleViewDetails = (product: { id: number; slug: string }) => {
     try {
@@ -88,12 +45,25 @@ export default function ProductsSection() {
       console.error("navigation_error", err);
     }
   };
+  const products = slugs.map((slug, idx) => {
+    const title = t(`products.cards.${slug}.title`);
+    const description = t(`products.cards.${slug}.description`);
+    const alt = title;
+    return {
+      id: idx + 1,
+      slug,
+      title,
+      description,
+      image: images[slug],
+      alt,
+    };
+  });
   return (
     <section className="py-20 bg-background transition-colors duration-300 dark:bg-background-dark" id="products">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-primary dark:text-primary-dark font-bold text-lg mb-2 block">ماذا نقدم</span>
-          <h2 className="text-4xl font-bold text-foreground">منتجاتنا وخدماتنا</h2>
+          <span className="text-primary dark:text-primary-dark font-bold text-lg mb-2 block">{t("products.section_label")}</span>
+          <h2 className="text-4xl font-bold text-foreground">{t("products.heading")}</h2>
           <div className="w-24 h-1 bg-primary dark:bg-primary-dark mx-auto mt-4 rounded-full"></div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -128,7 +98,7 @@ export default function ProductsSection() {
                   role="button"
                   className={`relative overflow-hidden inline-flex items-center gap-2 text-sm font-bold bg-primary dark:bg-primary-dark text-card-dark px-4 py-2 rounded-md transition-colors duration-300 transition-transform hover:-translate-y-0.5 hover:scale-[1.02] focus:scale-[1.02] hover:bg-primary-dark dark:hover:bg-primary ${isNavigatingId === product.id ? "opacity-70 cursor-wait" : ""}`}
                 >
-                  <span>عرض التفاصيل</span>
+                  <span>{t("products.actions.view_details")}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"

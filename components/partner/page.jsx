@@ -1,7 +1,9 @@
 import Image from "next/image";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { useI18n } from "@/i18n/I18nProvider";
 
 export default function Partner() {
+  const { t } = useI18n();
   return (
     <section id="partner" className="relative py-24 bg-background transition-colors duration-300 dark:bg-background-dark overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
@@ -11,12 +13,10 @@ export default function Partner() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="rounded-3xl overflow-hidden shadow-2xl bg-card-light dark:bg-card-dark border-b-8 border-primary dark:border-primary-dark flex flex-col md:flex-row">
           <div className="md:w-1/2 p-10 md:p-16 flex flex-col justify-center">
-            <span className="inline-block px-4 py-1 rounded-full bg-primary/15 text-primary font-bold">شركاؤنا</span>
-            <h2 className="mt-4 text-3xl md:text-4xl font-extrabold tracking-tight text-foreground">شراكة استراتيجية لنمو أعمالكم</h2>
+            <span className="inline-block px-4 py-1 rounded-full bg-primary/15 text-primary font-bold">{t("partner.section_label")}</span>
+            <h2 className="mt-4 text-3xl md:text-4xl font-extrabold tracking-tight text-foreground">{t("partner.heading")}</h2>
             <div className="w-24 h-1 bg-primary mt-4 rounded-full"></div>
-            <p className="mt-6 text-foreground/80 dark:text-gray-300 text-lg leading-relaxed">
-              سواء كنت صاحب مطعم، فندق، أو تاجر تجزئة، نحن نقدم لك حلولاً مخصصة تناسب حجم أعمالك مع أسعار تنافسية وجدولة توريد مرنة.
-            </p>
+            <p className="mt-6 text-foreground/80 dark:text-gray-300 text-lg leading-relaxed">{t("partner.description")}</p>
 
             <div className="flex items-center gap-3 mt-6">
               <a
@@ -24,14 +24,14 @@ export default function Partner() {
                 className="inline-flex items-center gap-2 bg-primary dark:bg-primary-dark text-secondary font-bold py-3 px-8 rounded-md shadow-lg hover:bg-primary-dark dark:hover:bg-primary transition-colors"
               >
                 <ArrowForwardIcon fontSize="small" className="shrink-0 " />
-                <span>ابدأ الشراكة الآن</span>
+                <span>{t("partner.actions.start_partnership")}</span>
               </a>
             </div>
           </div>
           <div className="md:w-1/2 relative min-h-[320px]">
             <div className="absolute inset-0">
               <Image
-                alt="Partnership"
+                alt={t("partner.image_alt")}
                 src="/icons/4.png"
                 fill
                 sizes="100vw"
