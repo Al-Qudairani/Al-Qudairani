@@ -18,14 +18,9 @@ export default function Navbar() {
   const { t, locale, setLocale } = useI18n();
   const isRTL = locale === 'ar';
 
-  // 🔹 أيقونات الهاتف (أصغر)
-  const mobileIconClass = 'text-[20px] sm:text-[22px]';
-
-  // 🔹 أيقونات الشاشات الكبيرة
-  const desktopIconClass =
-    'md:text-[30px] lg:text-[34px] xl:text-[38px]';
-
-  const iconClass = `${mobileIconClass} ${desktopIconClass} cursor-pointer`;
+  // 🔹 أحجام الأيقونات
+  const iconClass =
+    'cursor-pointer text-[20px] sm:text-[22px] md:text-[30px] lg:text-[34px]';
 
   const handleNav = (section) => {
     try {
@@ -42,18 +37,20 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-background/90 backdrop-blur-md shadow-md border-b-4 border-primary">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+    <header className="fixed top-0 left-0 w-full z-50 bg-background/90 backdrop-blur-md shadow-md border-b-4 border-primary">
+
+      {/* ===== Top Bar ===== */}
+      <div className="w-full px-4 md:px-6 lg:px-8 py-3 flex items-center">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-1">
+        <Link href="/" className="flex items-center gap-2 flex-1">
           <Image
             alt={t('navbar.alt.logo')}
-            className="h-14 sm:h-16 md:h-20 w-auto"
             src="/icons/13.png"
             width={100}
             height={100}
             priority
+            className="h-14 sm:h-16 md:h-20 w-auto"
           />
           <div>
             <h1 className="text-[14px] md:text-xl lg:text-2xl font-bold text-primary-dark">
@@ -72,24 +69,33 @@ export default function Navbar() {
           <Link className="px-3 py-2 rounded-md bg-primary text-secondary" href="/">
             {t('navbar.nav.home')}
           </Link>
-          <Link className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary" href="/#about"
-            onClick={(e) => { e.preventDefault(); handleNav('about'); }}>
+          <Link
+            className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary"
+            href="/#about"
+            onClick={(e) => { e.preventDefault(); handleNav('about'); }}
+          >
             {t('navbar.nav.about')}
           </Link>
-          <Link className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary" href="/#products"
-            onClick={(e) => { e.preventDefault(); handleNav('products'); }}>
+          <Link
+            className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary"
+            href="/#products"
+            onClick={(e) => { e.preventDefault(); handleNav('products'); }}
+          >
             {t('navbar.nav.products')}
           </Link>
-          <Link className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary" href="/#contact"
-            onClick={(e) => { e.preventDefault(); handleNav('contact'); }}>
+          <Link
+            className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary"
+            href="/#contact"
+            onClick={(e) => { e.preventDefault(); handleNav('contact'); }}
+          >
             {t('navbar.nav.contact')}
           </Link>
         </nav>
 
         {/* Actions */}
-        <div className="flex items-center gap-2 md:gap-4">
+        <div className="flex items-center gap-2 md:gap-4 flex-1 justify-end">
 
-          {/* 🔥 Menu Icon (أول أيقونة حسب اللغة) */}
+          {/* Menu Icon (mobile only) */}
           <button
             className={`p-2 md:hidden rounded-md hover:bg-card-light
               ${isRTL ? 'order-first' : 'order-last'}`}
@@ -102,22 +108,24 @@ export default function Navbar() {
           </button>
 
           {/* Dark Mode */}
-          <button className="p-2 rounded-full hover:bg-card-light">
+          <button
+            className="p-2 rounded-full hover:bg-card-light"
+            onClick={() => {
+              document.documentElement.classList.toggle('dark');
+              setIsDark(!isDark);
+            }}
+          >
             <NightsStaySharpIcon
-              onClick={() => {
-                document.documentElement.classList.toggle('dark');
-                setIsDark(!isDark);
-              }}
               className={`${iconClass} ${isDark ? 'text-black' : 'text-white'}`}
             />
           </button>
 
           {/* Language */}
-          <button className="p-2 rounded-full hover:bg-card-light">
-            <GTranslateIcon
-              onClick={() => setLocale(locale === 'ar' ? 'en' : 'ar')}
-              className={`${iconClass} text-primary-dark`}
-            />
+          <button
+            className="p-2 rounded-full hover:bg-card-light"
+            onClick={() => setLocale(locale === 'ar' ? 'en' : 'ar')}
+          >
+            <GTranslateIcon className={`${iconClass} text-primary-dark`} />
           </button>
 
           {/* Call Button */}
@@ -127,35 +135,65 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="hidden md:flex items-center gap-3 bg-primary hover:bg-primary-dark text-secondary font-bold py-4 px-8 rounded-md shadow-lg"
           >
-            <AddIcCallSharpIcon className="text-[28px] lg:text-[34px]" />
+            <AddIcCallSharpIcon className="text-[26px] lg:text-[32px]" />
             {t('navbar.actions.general_contact')}
           </a>
 
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`${open ? 'block' : 'hidden'} md:hidden bg-background border-t`}>
-        <div className={`container mx-auto px-4 py-2 flex ${isRTL ? 'justify-start' : 'justify-end'}`}>
-          <div className="flex flex-col gap-3 w-64 font-semibold">
-            <Link className="px-4 py-2 bg-primary text-secondary rounded-md" href="/" onClick={() => setOpen(false)}>
-              {t('navbar.nav.home')}
-            </Link>
-            <Link className="px-4 py-2 hover:bg-primary hover:text-secondary rounded-md" href="/#about"
-              onClick={(e) => { e.preventDefault(); handleNav('about'); }}>
-              {t('navbar.nav.about')}
-            </Link>
-            <Link className="px-4 py-2 hover:bg-primary hover:text-secondary rounded-md" href="/#products"
-              onClick={(e) => { e.preventDefault(); handleNav('products'); }}>
-              {t('navbar.nav.products')}
-            </Link>
-            <Link className="px-4 py-2 hover:bg-primary hover:text-secondary rounded-md" href="/#contact"
-              onClick={(e) => { e.preventDefault(); handleNav('contact'); }}>
-              {t('navbar.nav.contact')}
-            </Link>
-          </div>
+      {/* ===== Mobile Menu (FULL WIDTH) ===== */}
+      <div
+        className={`
+          ${open ? 'block' : 'hidden'}
+    md:hidden
+    fixed
+    top-[80px]
+    left-0
+    w-full
+    h-[calc(100vh-80px)]
+    bg-background/95
+    backdrop-blur-md
+    z-40
+        `}
+      >
+        <div className="flex flex-col gap-4 px-4 py-6 w-full font-semibold">
+
+          <Link
+            className="w-full text-center px-4 py-3 bg-primary text-secondary rounded-md"
+            href="/"
+            onClick={() => setOpen(false)}
+          >
+            {t('navbar.nav.home')}
+          </Link>
+
+          <Link
+            className="w-full text-center px-4 py-3 hover:bg-primary hover:text-secondary rounded-md"
+            href="/#about"
+            onClick={(e) => { e.preventDefault(); handleNav('about'); }}
+          >
+            {t('navbar.nav.about')}
+          </Link>
+
+          <Link
+            className="w-full text-center px-4 py-3 hover:bg-primary hover:text-secondary rounded-md"
+            href="/#products"
+            onClick={(e) => { e.preventDefault(); handleNav('products'); }}
+          >
+            {t('navbar.nav.products')}
+          </Link>
+
+          <Link
+            className="w-full text-center px-4 py-3 hover:bg-primary hover:text-secondary rounded-md"
+            href="/#contact"
+            onClick={(e) => { e.preventDefault(); handleNav('contact'); }}
+          >
+            {t('navbar.nav.contact')}
+          </Link>
+
         </div>
       </div>
+
     </header>
   );
 }
