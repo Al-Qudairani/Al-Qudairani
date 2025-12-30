@@ -2,11 +2,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import MenuSharpIcon from '@mui/icons-material/MenuSharp';
-import AddIcCallSharpIcon from '@mui/icons-material/AddIcCallSharp';
-import NightsStaySharpIcon from '@mui/icons-material/NightsStaySharp';
-import DisabledByDefaultSharpIcon from '@mui/icons-material/DisabledByDefaultSharp';
-import GTranslateIcon from '@mui/icons-material/GTranslate';
 import { usePathname, useRouter } from 'next/navigation';
 import { useI18n } from '@/i18n/I18nProvider';
 
@@ -74,45 +69,47 @@ export default function Navbar() {
             {t('navbar.nav.contact')}
           </Link>
         </nav>
-        <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
+        <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
           <button
-            className="p-1 md:hidden rounded-md bg-card-light hover:bg-card-dark/10 text-secondary dark:text-white transition-colors"
+            className="p-3 md:hidden rounded-md bg-card-light hover:bg-card-dark/10 text-secondary dark:text-white transition-colors"
             aria-label={t('navbar.aria.toggle_menu')}
             onClick={() => setOpen((v) => !v)}
           >
             {open ? (
-              <DisabledByDefaultSharpIcon fontSize="inherit" className="text-[14px]" />
+              <span className="text-sm font-bold">{locale === 'ar' ? 'إغلاق' : 'Close'}</span>
             ) : (
-              <MenuSharpIcon fontSize="inherit" className="text-[14px]" />
+              <span className="text-sm font-bold">{locale === 'ar' ? 'القائمة' : 'Menu'}</span>
             )}
           </button>
           <button
-            className="p-2 rounded-full hover:bg-card-light dark:hover:bg-card-dark transition-colors"
+            className="p-3 rounded-full hover:bg-card-light dark:hover:bg-card-dark transition-colors"
             aria-label={t('navbar.aria.toggle_dark_mode')}
             onClick={() => {
               document.documentElement.classList.toggle('dark');
               setIsDark((v) => !v);
             }}
           >
-            <NightsStaySharpIcon
-              fontSize="inherit"
+            <span
               className={
                 isDark
-                  ? 'text-primary-dark cursor-pointer text-[16px] md:text-[24px]'
-                  : 'text-background-dark cursor-pointer text-[16px] md:text-[24px]'
+                  ? 'text-primary-dark font-semibold text-sm md:text-base'
+                  : 'text-background-dark font-semibold text-sm md:text-base'
               }
-            />
+            >
+              {locale === 'ar' ? (isDark ? 'فاتح' : 'داكن') : (isDark ? 'Light' : 'Dark')}
+            </span>
           </button>
           <button
-            className="p-2 rounded-full hover:bg-card-light dark:hover:bg-card-dark transition-colors"
+            className="p-3 rounded-full hover:bg-card-light dark:hover:bg-card-dark transition-colors"
             aria-label="تبديل اللغة"
             title="تبديل اللغة"
             onClick={() => setLocale(locale === 'ar' ? 'en' : 'ar')}
           >
-            <GTranslateIcon fontSize="inherit" className="text-primary-dark cursor-pointer text-[16px] md:text-[24px]" />
+            <span className="text-primary-dark font-bold text-sm md:text-base">
+              {locale === 'ar' ? 'EN' : 'AR'}
+            </span>
           </button>
-          <button className="hidden md:inline-flex items-center justify-center gap-2 bg-primary cursor-pointer hover:bg-primary-dark text-secondary font-bold py-4 px-8 rounded-md shadow-lg transition-all transform hover:scale-105 leading-none">
-            <AddIcCallSharpIcon fontSize="small" className="shrink-0" />
+          <button className="hidden md:inline-flex items-center justify-center bg-primary cursor-pointer hover:bg-primary-dark text-secondary font-bold py-4 px-8 rounded-md shadow-lg transition-all transform hover:scale-105 leading-none">
             <span>
               <a
                 aria-label={t('navbar.aria.whatsapp_general')}
