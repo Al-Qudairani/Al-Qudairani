@@ -16,6 +16,7 @@ export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
   const { t, locale, setLocale } = useI18n();
+  const isRTL = locale === 'ar';
   const handleNav = (section) => {
     try {
       if (pathname === '/') {
@@ -34,16 +35,24 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center gap-1">
           <Link href="/" aria-label={t('navbar.aria.go_home')} className="flex items-center gap-1">
+            {/* شعار الشركة: يظهر وحده على الهاتف، مع نص العلامة على الشاشات الأكبر */}
             <Image
               alt={t('navbar.alt.logo')}
-              className="h-20 w-auto object-contain"
+              className="h-16 sm:h-20 w-auto object-contain"
               src="/icons/13.png"
               width={100}
               height={100}
+              priority
             />
             <div className="">
-              <h1 className="text-xl font-bold text-primary-dark">{t('navbar.brand_name')}</h1>
-              <p className="text-xs text-foreground">{t('navbar.brand_tagline')}</p>
+              <h1 className="text-[15px] md:text-xl lg:text-2xl font-bold text-primary-dark leading-tight md:leading-normal">
+                {t('navbar.brand_name')}
+              </h1>
+              {locale === 'ar' && (
+                <p className="text-[8px] sm:text-xs md:text-sm text-foreground">
+                  {t('navbar.brand_tagline')}
+                </p>
+              )}
             </div>
           </Link>
         </div>
@@ -65,13 +74,17 @@ export default function Navbar() {
             {t('navbar.nav.contact')}
           </Link>
         </nav>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
           <button
-            className="p-2 md:hidden rounded-md bg-card-light hover:bg-card-dark/10 text-secondary dark:text-white transition-colors"
+            className="p-1 md:hidden rounded-md bg-card-light hover:bg-card-dark/10 text-secondary dark:text-white transition-colors"
             aria-label={t('navbar.aria.toggle_menu')}
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <DisabledByDefaultSharpIcon fontSize="small" /> : <MenuSharpIcon fontSize="small" />}
+            {open ? (
+              <DisabledByDefaultSharpIcon fontSize="inherit" className="text-[14px]" />
+            ) : (
+              <MenuSharpIcon fontSize="inherit" className="text-[14px]" />
+            )}
           </button>
           <button
             className="p-2 rounded-full hover:bg-card-light dark:hover:bg-card-dark transition-colors"
@@ -81,7 +94,14 @@ export default function Navbar() {
               setIsDark((v) => !v);
             }}
           >
-            <NightsStaySharpIcon fontSize="large" className={isDark ? 'text-primary-dark cursor-pointer' : 'text-background-dark cursor-pointer'} />
+            <NightsStaySharpIcon
+              fontSize="inherit"
+              className={
+                isDark
+                  ? 'text-primary-dark cursor-pointer text-[16px] md:text-[24px]'
+                  : 'text-background-dark cursor-pointer text-[16px] md:text-[24px]'
+              }
+            />
           </button>
           <button
             className="p-2 rounded-full hover:bg-card-light dark:hover:bg-card-dark transition-colors"
@@ -89,7 +109,7 @@ export default function Navbar() {
             title="تبديل اللغة"
             onClick={() => setLocale(locale === 'ar' ? 'en' : 'ar')}
           >
-            <GTranslateIcon fontSize="large" className="text-primary-dark cursor-pointer" />
+            <GTranslateIcon fontSize="inherit" className="text-primary-dark cursor-pointer text-[16px] md:text-[24px]" />
           </button>
           <button className="hidden md:inline-flex items-center justify-center gap-2 bg-primary cursor-pointer hover:bg-primary-dark text-secondary font-bold py-4 px-8 rounded-md shadow-lg transition-all transform hover:scale-105 leading-none">
             <AddIcCallSharpIcon fontSize="small" className="shrink-0" />
@@ -108,8 +128,8 @@ export default function Navbar() {
         </div>
       </div>
       <div className={`${open ? 'block' : 'hidden'} md:hidden bg-background border-t border-card-dark/20`} role="dialog" aria-modal="true">
-        <div className="container mx-auto px-4 py-2">
-          <div className="flex flex-col gap-3 font-semibold text-foreground">
+        <div className={`container mx-auto px-4 py-2 flex ${isRTL ? 'justify-start' : 'justify-end'}`}>
+          <div className="flex flex-col gap-3 font-semibold text-foreground w-64">
             <Link
               className="px-4 py-2 rounded-md bg-primary text-secondary transition-colors"
               href="/"
