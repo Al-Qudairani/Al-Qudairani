@@ -1,9 +1,42 @@
+'use client';
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { useI18n } from "@/i18n/I18nProvider";
 
 export default function About() {
   const { t, messages } = useI18n();
+  const statsRef = useRef(null);
+  const [start, setStart] = useState(false);
+  useEffect(() => {
+    const el = statsRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver((entries) => {
+      if (entries[0]?.isIntersecting) {
+        setStart(true);
+        io.disconnect();
+      }
+    }, { threshold: 0.4 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  function Counter({ end, duration = 1200, prefix = "", suffix = "", start }) {
+    const [val, setVal] = useState(0);
+    useEffect(() => {
+      if (!start) return;
+      let raf = 0;
+      const t0 = performance.now();
+      const step = (t) => {
+        const p = Math.min((t - t0) / duration, 1);
+        setVal(Math.floor(p * end));
+        if (p < 1) raf = requestAnimationFrame(step);
+      };
+      raf = requestAnimationFrame(step);
+      return () => cancelAnimationFrame(raf);
+    }, [start, end, duration]);
+    return <div className="text-3xl font-extrabold text-primary">{`${prefix}${val}${suffix}`}</div>;
+  }
   return (
     <section className="py-24 bg-background-light dark:bg-background-dark transition-colors duration-300" id="about">
       <div className="container mx-auto px-4">
@@ -46,21 +79,21 @@ export default function About() {
               ))}
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+            <div ref={statsRef} className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
               <div className="text-center bg-card-light dark:bg-card-dark rounded-xl p-4 border-b-4 border-primary shadow-sm">
-                <div className="text-3xl font-extrabold text-primary">40+</div>
+                <Counter start={start} end={40} suffix="+" />
                 <div className="text-sm text-foreground/70">{t("about.stats.experience_years_label")}</div>
               </div>
               <div className="text-center bg-card-light dark:bg-card-dark rounded-xl p-4 border-b-4 border-primary shadow-sm">
-                <div className="text-3xl font-extrabold text-primary">100+</div>
+                <Counter start={start} end={25} suffix="+" />
                 <div className="text-sm text-foreground/70">{t("about.stats.partnerships_label")}</div>
               </div>
               <div className="text-center bg-card-light dark:bg-card-dark rounded-xl p-4 border-b-4 border-primary shadow-sm">
-                <div className="text-3xl font-extrabold text-primary">24/7</div>
+                <Counter start={start} end={24} suffix="/7" />
                 <div className="text-sm text-foreground/70">{t("about.stats.support_label")}</div>
               </div>
               <div className="text-center bg-card-light dark:bg-card-dark rounded-xl p-4 border-b-4 border-primary shadow-sm">
-                <div className="text-3xl font-extrabold text-primary">+95%</div>
+                <Counter start={start} end={95} prefix="+" suffix="%" />
                 <div className="text-sm text-foreground/70">{t("about.stats.customer_satisfaction_label")}</div>
               </div>
             </div>
@@ -84,4 +117,3 @@ export default function About() {
     </section>
   );
 }
-
