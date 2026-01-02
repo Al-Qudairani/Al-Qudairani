@@ -9,11 +9,11 @@ const slugs = [
   "table-eggs",
   "hatching-eggs",
   "poultry-meat",
+  "broiler-chick",
   "feeds",
   "medicines",
-  "broiler-chick",
-  "equipment",
   "additives",
+  "equipment",
 ] as const;
 
 const images: Record<string, string> = {
@@ -21,10 +21,10 @@ const images: Record<string, string> = {
   "hatching-eggs": "/icons/بيض تفقيس.png",
   "poultry-meat": "/icons/لحوم دواجن1.png",
   feeds: "/icons/Pellet.jpg",
-  medicines: "/icons/ادوية ولقاحات.png",
-  "broiler-chick": "/icons/chik.jpg",
-  equipment: "/icons/3.png",
-  additives: "/icons/13.png",
+  medicines: "/icons/ادوية ولقاحات1.png",
+  "broiler-chick": "/icons/صوص لاحم.png",
+  equipment: "/icons/معدات.png",
+  additives: "/icons/متممات علفية.png",
 };
 
 export default function ProductsSection() {

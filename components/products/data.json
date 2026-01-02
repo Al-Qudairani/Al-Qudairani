@@ -149,24 +149,24 @@
     "slug": "medicines",
     "name": "الأدوية واللقاحات",
     "hero": {
-      "image": "/icons/ادوية ولقاحات.png",
+      "image": "/icons/ادوية ولقاحات1.png",
       "alt": "الأدوية واللقاحات"
     },
     "sections": [
       {
         "title": "تحصينات أساسية",
         "desc": "جداول لقاحية تغطي الأمراض الشائعة في الدواجن.",
-        "image": "/icons/ادوية ولقاحات.png"
+        "image": "/icons/ادوية ولقاحات1.png"
       },
       {
         "title": "مضادات حيوية انتقائية",
         "desc": "اختيار آمن وفعال تحت إشراف بيطري.",
-        "image": "/icons/ادوية ولقاحات.png"
+        "image": "/icons/ادوية ولقاحات1.png"
       },
       {
         "title": "دعم مناعي",
         "desc": "مكملات لتعزيز مقاومة الأمراض والحد من الإجهاد.",
-        "image": "/icons/ادوية ولقاحات.png"
+        "image": "/icons/ادوية ولقاحات1.png"
       }
     ],
     "phones": ["+963989889025"]
@@ -201,24 +201,24 @@
     "slug": "equipment",
     "name": "معدات",
     "hero": {
-      "image": "/icons/3.png",
+      "image": "/icons/معدات.png",
       "alt": "معدات"
     },
     "sections": [
       {
         "title": "معدات التغذية",
         "desc": "أدوات حديثة لتوزيع العلف بكفاءة.",
-        "image": "/icons/3.png"
+        "image": "/icons/معدات.png"
       },
       {
         "title": "أنظمة الشرب",
         "desc": "حوامل شرب آلية تقلل الهدر وتضمن نظافة المياه.",
-        "image": "/icons/3.png"
+        "image": "/icons/معدات.png"
       },
       {
         "title": "التدفئة والتهوية",
         "desc": "حلول بيئية للحفاظ على راحة الطيور.",
-        "image": "/icons/3.png"
+        "image": "/icons/معدات.png"
       }
     ],
     "phones": ["+963989889025"]
@@ -239,12 +239,12 @@
       {
         "title": "دجاج مجمد",
         "desc": "منتجات مجمدة وفق سلاسل تبريد تراعي الجودة.",
-        "image": "/icons/لحوم دواجن1.png"
+        "image": "/icons/لحم مجمد.png"
       },
       {
         "title": "دجاج حي",
         "desc": "توفير دجاج حي وفق اشتراطات النقل والرعاية.",
-        "image": "/icons/لحوم دواجن1.png"
+        "image": "/icons/chickwhite.jpg"
       }
     ],
     "phones": ["+963989889012", "+963989889025"]
@@ -253,24 +253,24 @@
     "slug": "broiler-chick",
     "name": "صوص لاحم",
     "hero": {
-      "image": "/icons/chik.jpg",
+      "image": "/icons/صوص لاحم.png",
       "alt": "صوص لاحم"
     },
     "sections": [
       {
         "title": "اختيار السلالات",
         "desc": "سلالات ذات نمو سريع وصحة عالية.",
-        "image": "/icons/chik.jpg"
+        "image": "/icons/صوص لاحم.png"
       },
       {
         "title": "رعاية أولية",
         "desc": "برامج تدفئة وتغذية لبداية سليمة.",
-        "image": "/icons/chik.jpg"
+        "image": "/icons/صوص لاحم.png"
       },
       {
         "title": "تحصين مبكر",
         "desc": "خطط تحصين تقلل نسب الأمراض.",
-        "image": "/icons/chik.jpg"
+        "image": "/icons/صوص لاحم.png"
       }
     ],
     "phones": ["+963 993 982 582", "+963989889025"]
@@ -279,24 +279,24 @@
     "slug": "additives",
     "name": "متممات علفية",
     "hero": {
-      "image": "/icons/13.png",
+      "image": "/icons/متممات علفية.png",
       "alt": "متممات علفية"
     },
     "sections": [
       {
         "title": "بريمكس",
         "desc": "خلائط جاهزة من العناصر الدقيقة لدعم الأداء.",
-        "image": "/icons/13.png"
+        "image": "/icons/متممات علفية.png"
       },
       {
         "title": "فتامينات",
         "desc": "مكملات لتعزيز المناعة والنمو.",
-        "image": "/icons/13.png"
+        "image": "/icons/متممات علفية.png"
       },
       {
         "title": "معادن",
         "desc": "عناصر معدنية أساسية لتحسين الصحة والإنتاج.",
-        "image": "/icons/13.png"
+        "image": "/icons/متممات علفية.png"
       }
     ],
     "phones": ["+963989889025"]
