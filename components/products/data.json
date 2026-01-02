@@ -81,19 +81,19 @@
     "slug": "table-eggs",
     "name": "بيض المائدة",
     "hero": {
-      "image": "/icons/بيض مائدة.png",
+      "image": "/icons/1.png",
       "alt": "بيض المائدة"
     },
     "sections": [
       {
         "title": "كرستان مغلف",
         "desc": "بيض مغلف ضمن كرستان بمعايير فحص وجودة.",
-        "image": "/icons/بيض مائدة.png"
+        "image": "/icons/1.png"
       },
       {
         "title": "كرتون مغلف",
         "desc": "بيض مغلف في كرتون بتغليف آمن ومعايير معتمدة.",
-        "image": "/icons/بيض مائدة.png"
+        "image": "/icons/1.png"
       }
     ],
     "phones": ["+963989889028", "+963989889025"]
