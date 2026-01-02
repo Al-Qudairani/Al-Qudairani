@@ -89,37 +89,39 @@ export default function ProductPage(props) {
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground">{t('productDetail.sections.heading')}</h2>
-            <p className="mt-3 text-foreground/70">{t('productDetail.sections.description')}</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {localizedSections?.map((sec, idx) => (
-              <div
-                key={idx}
-                className="group bg-card-light dark:bg-card-dark rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-b-4 border-primary dark:border-primary-dark"
-              >
-                <div className="relative h-44 overflow-hidden">
-                  <Image
-                    alt={sec.title}
-                    src={sec.image}
-                    fill
-                    sizes="100vw"
-                    className="object-cover transform group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-black/10"></div>
+      {Array.isArray(localizedSections) && localizedSections.length > 0 && (
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">{t('productDetail.sections.heading')}</h2>
+              <p className="mt-3 text-foreground/70">{t('productDetail.sections.description')}</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {localizedSections.map((sec, idx) => (
+                <div
+                  key={idx}
+                  className="group bg-card-light dark:bg-card-dark rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-b-4 border-primary dark:border-primary-dark"
+                >
+                  <div className="relative h-44 overflow-hidden">
+                    <Image
+                      alt={sec.title}
+                      src={sec.image}
+                      fill
+                      sizes="100vw"
+                      className="object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/10"></div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold mb-2 text-secondary dark:text-primary-dark">{sec.title}</h3>
+                    <p className="text-foreground/70 text-sm">{sec.desc}</p>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold mb-2 text-secondary dark:text-primary-dark">{sec.title}</h3>
-                  <p className="text-foreground/70 text-sm">{sec.desc}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className="py-16 bg-background-light dark:bg-background-dark">
         <div className="container mx-auto px-4">

@@ -128,14 +128,14 @@
       "sections": [
         {
           "title": "Imported Eggs",
-          "desc": "Imported hatching eggs with certified quality and strict monitoring."
+          "desc": "Fertilized eggs imported with certified quality and strict monitoring."
         },
         {
           "title": "Local Eggs",
-          "desc": "Local hatching eggs with excellent fertility rates."
+          "desc": "Locally produced hatching eggs with excellent fertility rates."
         }
       ],
-      "phones": ["+963989889025"]
+      "phones": ["+963 993 982 582"]
     },
     "broiler-farming": {
       "slug": "broiler-farming",
@@ -179,7 +179,7 @@
           "desc": "Supplements to enhance disease resistance and reduce stress."
         }
       ],
-      "phones": ["+963989889025"]
+      "phones": ["+963 985 933 335"]
     },
     "supplies": {
       "slug": "supplies",
@@ -223,7 +223,7 @@
           "desc": "Environmental solutions to keep birds comfortable."
         }
       ],
-      "phones": ["+963989889025"]
+      "phones": ["+963 985 933 335"]
     },
     "poultry-meat": {
       "slug": "poultry-meat",
@@ -289,7 +289,7 @@
           "desc": "Essential minerals to improve health and production."
         }
       ],
-      "phones": ["+963989889025"]
+      "phones": ["+963 985 933 335"]
     }
   }
 }
