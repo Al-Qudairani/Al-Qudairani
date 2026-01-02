@@ -55,24 +55,24 @@
     "slug": "feeds",
     "name": "الأعلاف",
     "hero": {
-      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAp3ohUqYBAnNe96CtxsjPIoONRutng-41oXazhWK0IXNkj1VFop_4Ku7_j4h1_J--MOEnDjRfuAe_6nTRhSvhiDlzBaHOhlFfU9pivayhmUAjDSghweMGY4WokS6OJIhnrvYJhXSDHf9MjuA3o9X1L2PmxusRlCuT-KAYNbYtubURHZ13vEvMjfNNiBnrCUC-o-IPEwLVKqTsBbSO-IqcQCfG9Y4uDU2YcfJgwhQMSpRsfVZUREVn3ifiBKDs-CE17S6WRAc2i64A",
+      "image": "/icons/Pellet.jpg",
       "alt": "الأعلاف"
     },
     "sections": [
       {
         "title": "علف دجاج لاحم",
         "desc": "تركيبات تدعم النمو السريع والتحويل الغذائي الجيد.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAp3ohUqYBAnNe96CtxsjPIoONRutng-41oXazhWK0IXNkj1VFop_4Ku7_j4h1_J--MOEnDjRfuAe_6nTRhSvhiDlzBaHOhlFfU9pivayhmUAjDSghweMGY4WokS6OJIhnrvYJhXSDHf9MjuA3o9X1L2PmxusRlCuT-KAYNbYtubURHZ13vEvMjfNNiBnrCUC-o-IPEwLVKqTsBbSO-IqcQCfG9Y4uDU2YcfJgwhQMSpRsfVZUREVn3ifiBKDs-CE17S6WRAc2i64A"
+        "image": "/icons/Pellet.jpg"
       },
       {
         "title": "علف دجاج بيض",
         "desc": "صيغ تعزز إنتاج البيض وقوة القشرة.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAp3ohUqYBAnNe96CtxsjPIoONRutng-41oXazhWK0IXNkj1VFop_4Ku7_j4h1_J--MOEnDjRfuAe_6nTRhSvhiDlzBaHOhlFfU9pivayhmUAjDSghweMGY4WokS6OJIhnrvYJhXSDHf9MjuA3o9X1L2PmxusRlCuT-KAYNbYtubURHZ13vEvMjfNNiBnrCUC-o-IPEwLVKqTsBbSO-IqcQCfG9Y4uDU2YcfJgwhQMSpRsfVZUREVn3ifiBKDs-CE17S6WRAc2i64A"
+        "image": "/icons/Pellet.jpg"
       },
       {
         "title": "علف دجاج أمهات",
         "desc": "خلائط مخصصة للأمهات لضمان خصوبة وصحة القطيع.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAp3ohUqYBAnNe96CtxsjPIoONRutng-41oXazhWK0IXNkj1VFop_4Ku7_j4h1_J--MOEnDjRfuAe_6nTRhSvhiDlzBaHOhlFfU9pivayhmUAjDSghweMGY4WokS6OJIhnrvYJhXSDHf9MjuA3o9X1L2PmxusRlCuT-KAYNbYtubURHZ13vEvMjfNNiBnrCUC-o-IPEwLVKqTsBbSO-IqcQCfG9Y4uDU2YcfJgwhQMSpRsfVZUREVn3ifiBKDs-CE17S6WRAc2i64A"
+        "image": "/icons/Pellet.jpg"
       }
     ],
     "phones": ["+963985933335", "+963989889025"]
@@ -81,19 +81,19 @@
     "slug": "table-eggs",
     "name": "بيض المائدة",
     "hero": {
-      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDS81nhaUFll9w2mwoz6_bkU06emMLe6N5NUHOSCM3kaqsPIMHbNI2_8DQ7h1hqOwQecR9bGjPWkF9QrNmSkzUBxCRzfXjLPBYk0seQehmPbWPf8aX2scOcLSrdDJscekIgCYXCzHNk1ylhVSMrEKnsiR6R3I3xaVPKHSRRN_BMf-8pCM_0sKTtMNXtpiLRsVvMiitSHZhPrrezN8kSiTXC6sfm2-AEQe-lzORZYVTjm_N6zAoxzIcedeifNPVIgQ3-g6oDTo2hXCI",
+      "image": "/icons/بيض مائدة.png",
       "alt": "بيض المائدة"
     },
     "sections": [
       {
         "title": "كرستان مغلف",
         "desc": "بيض مغلف ضمن كرستان بمعايير فحص وجودة.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDS81nhaUFll9w2mwoz6_bkU06emMLe6N5NUHOSCM3kaqsPIMHbNI2_8DQ7h1hqOwQecR9bGjPWkF9QrNmSkzUBxCRzfXjLPBYk0seQehmPbWPf8aX2scOcLSrdDJscekIgCYXCzHNk1ylhVSMrEKnsiR6R3I3xaVPKHSRRN_BMf-8pCM_0sKTtMNXtpiLRsVvMiitSHZhPrrezN8kSiTXC6sfm2-AEQe-lzORZYVTjm_N6zAoxzIcedeifNPVIgQ3-g6oDTo2hXCI"
+        "image": "/icons/بيض مائدة.png"
       },
       {
         "title": "كرتون مغلف",
         "desc": "بيض مغلف في كرتون بتغليف آمن ومعايير معتمدة.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDS81nhaUFll9w2mwoz6_bkU06emMLe6N5NUHOSCM3kaqsPIMHbNI2_8DQ7h1hqOwQecR9bGjPWkF9QrNmSkzUBxCRzfXjLPBYk0seQehmPbWPf8aX2scOcLSrdDJscekIgCYXCzHNk1ylhVSMrEKnsiR6R3I3xaVPKHSRRN_BMf-8pCM_0sKTtMNXtpiLRsVvMiitSHZhPrrezN8kSiTXC6sfm2-AEQe-lzORZYVTjm_N6zAoxzIcedeifNPVIgQ3-g6oDTo2hXCI"
+        "image": "/icons/بيض مائدة.png"
       }
     ],
     "phones": ["+963989889028", "+963989889025"]
@@ -102,19 +102,19 @@
     "slug": "hatching-eggs",
     "name": "بيض التفريخ",
     "hero": {
-      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA3X36tCaBsNo3Mo890EdYDqTDWAOTuUHbu0PmVDBRDSF2_xOPvpkOonC-8-AKRt9CVXWAFOz_LGeYj3p_fO6OmVW1IY_6x4FB3ap7XCp4KhsJ5S-Yqvvyh85rbKTci0F3DM1PK56QU3nc-fGmS_T7FiONM7kV5J8XFgX4OLd-pLiaZZB9BBePEn6Fi-bfBEg51fjuxFOCio9ie0zx_IyAGpPuTy9jKfLdiKhLVeo_JGxMQObMDqGJkGZRERq_UonqoOg5bHc5ydE4",
+      "image": "/icons/بيض تفقيس.png",
       "alt": "بيض التفريخ"
     },
     "sections": [
       {
         "title": "بيض مستورد",
         "desc": "بيض تفقيس مستورد بجودة معتمدة ومراقبة صارمة.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA3X36tCaBsNo3Mo890EdYDqTDWAOTuUHbu0PmVDBRDSF2_xOPvpkOonC-8-AKRt9CVXWAFOz_LGeYj3p_fO6OmVW1IY_6x4FB3ap7XCp4KhsJ5S-Yqvvyh85rbKTci0F3DM1PK56QU3nc-fGmS_T7FiONM7kV5J8XFgX4OLd-pLiaZZB9BBePEn6Fi-bfBEg51fjuxFOCio9ie0zx_IyAGpPuTy9jKfLdiKhLVeo_JGxMQObMDqGJkGZRERq_UonqoOg5bHc5ydE4"
+        "image": "/icons/بيض تفقيس.png"
       },
       {
         "title": "بيض محلي",
         "desc": "بيض تفقيس محلي بنسب خصوبة ممتازة.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA3X36tCaBsNo3Mo890EdYDqTDWAOTuUHbu0PmVDBRDSF2_xOPvpkOonC-8-AKRt9CVXWAFOz_LGeYj3p_fO6OmVW1IY_6x4FB3ap7XCp4KhsJ5S-Yqvvyh85rbKTci0F3DM1PK56QU3nc-fGmS_T7FiONM7kV5J8XFgX4OLd-pLiaZZB9BBePEn6Fi-bfBEg51fjuxFOCio9ie0zx_IyAGpPuTy9jKfLdiKhLVeo_JGxMQObMDqGJkGZRERq_UonqoOg5bHc5ydE4"
+        "image": "/icons/بيض تفقيس.png"
       }
     ],
     "phones": ["+963 993 982 582", "+963989889025"]
@@ -149,24 +149,24 @@
     "slug": "medicines",
     "name": "الأدوية واللقاحات",
     "hero": {
-      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCrtEakr2JChkUv9ixuKpePm-wEX692iHrs1Dh0MirgsIPTFdp9tBW4dC1XKMxoX4JgER3WKDZG2RS5mnV3i1FSeNBIF21fFpcw9_eBOvrcAqe4IIDhJTNMGyiD7uyyAgs_mU9KOWjBm3hwxgCFI8YqHuX6SNsGHflcpMoH4btsvuHZlztQM8tooa0iqK6kzLan7XVy-FwtFNuOiNEpYazeNI19NllLVzNmPXzPS14ITEgYCUXmkfyDlsmpAyUW_bfYsLtXyx50Fpw",
+      "image": "/icons/ادوية ولقاحات.png",
       "alt": "الأدوية واللقاحات"
     },
     "sections": [
       {
         "title": "تحصينات أساسية",
         "desc": "جداول لقاحية تغطي الأمراض الشائعة في الدواجن.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCrtEakr2JChkUv9ixuKpePm-wEX692iHrs1Dh0MirgsIPTFdp9tBW4dC1XKMxoX4JgER3WKDZG2RS5mnV3i1FSeNBIF21fFpcw9_eBOvrcAqe4IIDhJTNMGyiD7uyyAgs_mU9KOWjBm3hwxgCFI8YqHuX6SNsGHflcpMoH4btsvuHZlztQM8tooa0iqK6kzLan7XVy-FwtFNuOiNEpYazeNI19NllLVzNmPXzPS14ITEgYCUXmkfyDlsmpAyUW_bfYsLtXyx50Fpw"
+        "image": "/icons/ادوية ولقاحات.png"
       },
       {
         "title": "مضادات حيوية انتقائية",
         "desc": "اختيار آمن وفعال تحت إشراف بيطري.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCrtEakr2JChkUv9ixuKpePm-wEX692iHrs1Dh0MirgsIPTFdp9tBW4dC1XKMxoX4JgER3WKDZG2RS5mnV3i1FSeNBIF21fFpcw9_eBOvrcAqe4IIDhJTNMGyiD7uyyAgs_mU9KOWjBm3hwxgCFI8YqHuX6SNsGHflcpMoH4btsvuHZlztQM8tooa0iqK6kzLan7XVy-FwtFNuOiNEpYazeNI19NllLVzNmPXzPS14ITEgYCUXmkfyDlsmpAyUW_bfYsLtXyx50Fpw"
+        "image": "/icons/ادوية ولقاحات.png"
       },
       {
         "title": "دعم مناعي",
         "desc": "مكملات لتعزيز مقاومة الأمراض والحد من الإجهاد.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCrtEakr2JChkUv9ixuKpePm-wEX692iHrs1Dh0MirgsIPTFdp9tBW4dC1XKMxoX4JgER3WKDZG2RS5mnV3i1FSeNBIF21fFpcw9_eBOvrcAqe4IIDhJTNMGyiD7uyyAgs_mU9KOWjBm3hwxgCFI8YqHuX6SNsGHflcpMoH4btsvuHZlztQM8tooa0iqK6kzLan7XVy-FwtFNuOiNEpYazeNI19NllLVzNmPXzPS14ITEgYCUXmkfyDlsmpAyUW_bfYsLtXyx50Fpw"
+        "image": "/icons/ادوية ولقاحات.png"
       }
     ],
     "phones": ["+963989889025"]
@@ -227,24 +227,24 @@
     "slug": "poultry-meat",
     "name": "لحوم الدواجن",
     "hero": {
-      "image": "/icons/4.png",
+      "image": "/icons/لحوم دواجن1.png",
       "alt": "لحوم الدواجن"
     },
     "sections": [
       {
         "title": "دجاج طازج",
         "desc": "توريد دجاج طازج يومي مع التزام بمعايير السلامة.",
-        "image": "/icons/4.png"
+        "image": "/icons/لحوم دواجن1.png"
       },
       {
         "title": "دجاج مجمد",
         "desc": "منتجات مجمدة وفق سلاسل تبريد تراعي الجودة.",
-        "image": "/icons/4.png"
+        "image": "/icons/لحوم دواجن1.png"
       },
       {
         "title": "دجاج حي",
         "desc": "توفير دجاج حي وفق اشتراطات النقل والرعاية.",
-        "image": "/icons/4.png"
+        "image": "/icons/لحوم دواجن1.png"
       }
     ],
     "phones": ["+963989889012", "+963989889025"]

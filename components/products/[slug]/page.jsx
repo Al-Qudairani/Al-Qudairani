@@ -27,7 +27,11 @@ export default function ProductPage(props) {
     );
   }
 
-  const sanitize = (s) => (typeof s === 'string' ? s.replace(/[\u0600-\u06FF]/g, '') : s);
+  const sanitize = (s) => {
+    if (typeof s !== 'string') return s;
+    const isRelative = s.startsWith('/') || s.startsWith('./') || s.startsWith('../');
+    return isRelative ? s : s.replace(/[\u0600-\u06FF]/g, '');
+  };
   const cleanProduct = {
     ...product,
     hero: { ...product.hero, image: sanitize(product.hero?.image) },

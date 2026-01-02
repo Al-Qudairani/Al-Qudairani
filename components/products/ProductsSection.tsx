@@ -17,11 +17,11 @@ const slugs = [
 ] as const;
 
 const images: Record<string, string> = {
-  "table-eggs": "/icons/whiteEgg.png",
-  "hatching-eggs": "/icons/8.png",
-  "poultry-meat": "/icons/4.png",
-  feeds: "/icons/3.png",
-  medicines: "/icons/13.png",
+  "table-eggs": "/icons/بيض مائدة.png",
+  "hatching-eggs": "/icons/بيض تفقيس.png",
+  "poultry-meat": "/icons/لحوم دواجن1.png",
+  feeds: "/icons/Pellet.jpg",
+  medicines: "/icons/ادوية ولقاحات.png",
   "broiler-chick": "/icons/chik.jpg",
   equipment: "/icons/3.png",
   additives: "/icons/13.png",
