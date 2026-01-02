@@ -20,7 +20,7 @@ const images: Record<string, string> = {
   "table-eggs": "/icons/1.png",
   "hatching-eggs": "/icons/بيض تفقيس.png",
   "poultry-meat": "/icons/لحوم دواجن1.png",
-  feeds: "/icons/Pellet.jpg",
+  feeds: "/icons/Pellet.png",
   medicines: "/icons/ادوية ولقاحات1.png",
   "broiler-chick": "/icons/صوص لاحم.png",
   equipment: "/icons/معدات.png",

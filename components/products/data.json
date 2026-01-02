@@ -55,24 +55,24 @@
     "slug": "feeds",
     "name": "الأعلاف",
     "hero": {
-      "image": "/icons/Pellet.jpg",
+      "image": "/icons/Pellet.png",
       "alt": "الأعلاف"
     },
     "sections": [
       {
         "title": "علف دجاج لاحم",
         "desc": "تركيبات تدعم النمو السريع والتحويل الغذائي الجيد.",
-        "image": "/icons/Pellet.jpg"
+        "image": "/icons/Pellet.png"
       },
       {
         "title": "علف دجاج بيض",
         "desc": "صيغ تعزز إنتاج البيض وقوة القشرة.",
-        "image": "/icons/Pellet.jpg"
+        "image": "/icons/Pellet.png"
       },
       {
         "title": "علف دجاج أمهات",
         "desc": "خلائط مخصصة للأمهات لضمان خصوبة وصحة القطيع.",
-        "image": "/icons/Pellet.jpg"
+        "image": "/icons/Pellet.png"
       }
     ],
     "phones": ["+963985933335", "+963989889025"]
