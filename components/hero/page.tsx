@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import { useI18n } from "@/i18n/I18nProvider";
 
@@ -8,11 +9,11 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           alt={t("hero.alt.background")}
-          src="/icons/chik.jpg"
+          src="/icons/chik.png"
           fill
           priority
           sizes="100vw"
-          className="w-full h-full object-cover object-center blur-[6px]"
+          className="w-full h-full object-cover object-center blur-[2px]"
         />
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/50 via-black/25 to-black/60"></div>
       </div>

@@ -2,11 +2,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import MenuSharpIcon from '@mui/icons-material/MenuSharp';
-import AddIcCallSharpIcon from '@mui/icons-material/AddIcCallSharp';
-import NightsStaySharpIcon from '@mui/icons-material/NightsStaySharp';
-import DisabledByDefaultSharpIcon from '@mui/icons-material/DisabledByDefaultSharp';
-import GTranslateIcon from '@mui/icons-material/GTranslate';
+import dynamic from 'next/dynamic';
+const MenuSharpIcon = dynamic(() => import('@mui/icons-material/MenuSharp'), { ssr: false });
+const AddIcCallSharpIcon = dynamic(() => import('@mui/icons-material/AddIcCallSharp'), { ssr: false });
+const NightsStaySharpIcon = dynamic(() => import('@mui/icons-material/NightsStaySharp'), { ssr: false });
+const DisabledByDefaultSharpIcon = dynamic(() => import('@mui/icons-material/DisabledByDefaultSharp'), { ssr: false });
+const GTranslateIcon = dynamic(() => import('@mui/icons-material/GTranslate'), { ssr: false });
 import { usePathname, useRouter } from 'next/navigation';
 import { useI18n } from '@/i18n/I18nProvider';
 
@@ -49,7 +50,6 @@ export default function Navbar() {
             src="/icons/13.png"
             width={100}
             height={100}
-            priority
             className="h-14 sm:h-16 md:h-20 w-auto"
           />
           <div>

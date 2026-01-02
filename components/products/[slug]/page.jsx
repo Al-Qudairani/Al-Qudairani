@@ -1,8 +1,9 @@
 'use client';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import AddIcCallSharpIcon from '@mui/icons-material/AddIcCallSharp';
+import dynamic from 'next/dynamic';
+const WhatsAppIcon = dynamic(() => import('@mui/icons-material/WhatsApp'), { ssr: false });
+const AddIcCallSharpIcon = dynamic(() => import('@mui/icons-material/AddIcCallSharp'), { ssr: false });
 import Footer from '../../footer/page';
 import data from '../data.json';
 import Link from 'next/link';
@@ -107,7 +108,7 @@ export default function ProductPage(props) {
                       alt={sec.title}
                       src={sec.image}
                       fill
-                      sizes="100vw"
+                      sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
                       className="object-cover transform group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-black/10"></div>

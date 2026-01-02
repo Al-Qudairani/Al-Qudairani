@@ -1,10 +1,11 @@
 'use client';
 import Image from 'next/image';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
-import EmailSharpIcon from '@mui/icons-material/EmailSharp';
+import dynamic from 'next/dynamic';
+const WhatsAppIcon = dynamic(() => import('@mui/icons-material/WhatsApp'), { ssr: false });
+const InstagramIcon = dynamic(() => import('@mui/icons-material/Instagram'), { ssr: false });
+const FacebookIcon = dynamic(() => import('@mui/icons-material/Facebook'), { ssr: false });
+const LocationOnSharpIcon = dynamic(() => import('@mui/icons-material/LocationOnSharp'), { ssr: false });
+const EmailSharpIcon = dynamic(() => import('@mui/icons-material/EmailSharp'), { ssr: false });
 import { useI18n } from '@/i18n/I18nProvider';
 export default function Footer() {
   const { t } = useI18n();

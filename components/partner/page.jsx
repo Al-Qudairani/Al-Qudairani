@@ -1,5 +1,7 @@
+'use client';
 import Image from "next/image";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import dynamic from "next/dynamic";
+const ArrowForwardIcon = dynamic(() => import("@mui/icons-material/ArrowForward"), { ssr: false });
 import { useI18n } from "@/i18n/I18nProvider";
 
 export default function Partner() {
@@ -34,7 +36,7 @@ export default function Partner() {
                 alt={t("partner.image_alt")}
                 src="/icons/4.png"
                 fill
-                sizes="100vw"
+                sizes="(min-width:1024px) 50vw, 100vw"
                 className="object-cover"
               />
             </div>
