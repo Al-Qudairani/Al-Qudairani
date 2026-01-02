@@ -1,7 +1,10 @@
 'use client';
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import dynamic from "next/dynamic";
+const WhatsAppIcon = dynamic(() => import("@mui/icons-material/WhatsApp"), { ssr: false });
+const PlayArrowIcon = dynamic(() => import("@mui/icons-material/PlayArrow"), { ssr: false });
+const CheckCircleIcon = dynamic(() => import("@mui/icons-material/CheckCircle"), { ssr: false });
 import { useI18n } from "@/i18n/I18nProvider";
 
 export default function About() {
@@ -62,7 +65,7 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/25 to-transparent"></div>
               <div className="absolute inset-0 flex items-center justify-center cursor-pointer">
                 <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center pl-1 shadow-lg ring-8 ring-white/10 hover:ring-white/20 transition">
-                  <span className="material-icons text-secondary text-4xl">play_arrow</span>
+                  <PlayArrowIcon className="text-secondary" fontSize="large" />
                 </div>
               </div>
             </div>
@@ -73,7 +76,7 @@ export default function About() {
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {(messages?.about?.highlights || []).map((item, idx) => (
                 <div key={idx} className="flex items-center gap-3 bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm">
-                  <span className="material-icons text-primary">check_circle</span>
+                  <CheckCircleIcon className="text-primary" fontSize="small" />
                   <span className="text-foreground">{item}</span>
                 </div>
               ))}

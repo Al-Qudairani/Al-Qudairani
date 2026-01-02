@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "../../components/navbar/page";
 import localFont from "next/font/local";
+import { Cairo } from "next/font/google";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import { getLocaleFromCookie, getDirection, loadMessages } from "@/i18n/server";
 import type { Messages } from "@/i18n/server";
@@ -12,6 +13,11 @@ const expoArabic = localFont({
   weight: "400",
   style: "normal",
   variable: "--font-expo",
+  display: "swap",
+});
+
+const cairo = Cairo({
+  subsets: ["arabic"],
   display: "swap",
 });
 
@@ -100,9 +106,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang={locale} dir={dir} className={expoArabic.variable}>
       <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="preconnect" href="https://lh3.googleusercontent.com" crossOrigin="" />
         <script
           type="application/ld+json"
@@ -132,7 +135,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           }}
         />
       </head>
-      <body>
+      <body className={cairo.className}>
         <I18nProvider locale={locale} dir={dir} messages={messages}>
           <Navbar/>
           {children}

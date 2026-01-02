@@ -1,5 +1,14 @@
  'use client';
+import dynamic from "next/dynamic";
 import { useI18n } from "@/i18n/I18nProvider";
+const VerifiedUserIcon = dynamic(() => import("@mui/icons-material/VerifiedUser"), { ssr: false });
+const LocalShippingIcon = dynamic(() => import("@mui/icons-material/LocalShipping"), { ssr: false });
+const SupportAgentIcon = dynamic(() => import("@mui/icons-material/SupportAgent"), { ssr: false });
+const iconMap = {
+  verified_user: VerifiedUserIcon,
+  local_shipping: LocalShippingIcon,
+  support_agent: SupportAgentIcon,
+};
 export default function WhyUs() {
   const { t, messages } = useI18n();
   const features = messages?.whyUs?.features || [];
@@ -28,7 +37,10 @@ export default function WhyUs() {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-primary/10 to-transparent"></div>
               <div className="relative p-8">
                 <div className="w-20 h-20 mx-auto bg-primary text-secondary rounded-full flex items-center justify-center shadow-lg shadow-primary/30 ring-8 ring-white/10 group-hover:ring-white/20 transition-all duration-300 mb-6">
-                  <span className="material-icons text-4xl">{item.icon}</span>
+                  {(() => {
+                    const Icon = iconMap[item.icon] || VerifiedUserIcon;
+                    return <Icon fontSize="large" />;
+                  })()}
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-primary">{item.title}</h3>
                 <p className="text-gray-300">{item.desc}</p>
