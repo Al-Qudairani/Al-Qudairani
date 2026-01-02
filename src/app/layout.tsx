@@ -66,7 +66,13 @@ export async function generateMetadata(): Promise<Metadata> {
     authors: [{ name: brand }],
     creator: brand,
     category: "business",
-    alternates: { canonical: "/" },
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        ar: "/ar",
+        en: "/en",
+      },
+    },
     robots: {
       index: true,
       follow: true,

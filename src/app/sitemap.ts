@@ -19,6 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const items: MetadataRoute.Sitemap = [
     { url: new URL("/", base).toString(), lastModified: now },
+    { url: new URL("/ar", base).toString(), lastModified: now },
+    { url: new URL("/en", base).toString(), lastModified: now },
   ];
   const slugs = Object.keys(data as Record<string, unknown>);
   for (const slug of slugs) {
