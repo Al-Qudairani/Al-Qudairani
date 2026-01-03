@@ -211,16 +211,20 @@
       },
       "sections": [
         {
-          "title": "Feeding Equipment",
-          "desc": "Modern tools for efficient feed distribution."
+          "title": "Poultry Facility Setup",
+          "desc": "Supply and installation of complete poultry facility equipment and integrated operating systems."
         },
         {
-          "title": "Drinking Systems",
-          "desc": "Automatic drinking systems that reduce waste and ensure water cleanliness."
+          "title": "Ventilation & Cooling Systems",
+          "desc": "Effective ventilation and cooling solutions to maintain an optimal barn environment."
         },
         {
-          "title": "Heating & Ventilation",
-          "desc": "Environmental solutions to keep birds comfortable."
+          "title": "Feed & Water Lines",
+          "desc": "Design and implementation of automated feed and water distribution lines."
+        },
+        {
+          "title": "Incubators & Hatching Equipment",
+          "desc": "Supply and installation of incubators and hatching equipment with certified quality standards."
         }
       ],
       "phones": ["+963 985 933 335"]

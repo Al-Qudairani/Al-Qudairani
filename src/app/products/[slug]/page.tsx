@@ -9,11 +9,12 @@ export default function Page({ params }: { params: { slug: string } }) {
   return <ProductPage params={params} />;
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const locale = await getLocaleFromCookie();
   const messages: Messages = await loadMessages(locale);
   const brand = String(resolvePath(messages, "navbar.brand_name") || (locale === "ar" ? "شركة القديراني" : "Al-Qudairani Company"));
-  const slug = String(params?.slug || "");
+  const { slug: rawSlug } = await params;
+  const slug = String(rawSlug || "");
   const entry: unknown = (data as Record<string, unknown>)[slug];
   const name = String(resolvePath(messages, `productData.${slug}.name`) || (entry && typeof entry === "object" ? (entry as Record<string, unknown>)["name"] : slug) || slug);
   const description = String(
