@@ -6,11 +6,11 @@ function resolveBase(): URL {
     process.env.NEXT_PUBLIC_SITE_URL ||
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "") ||
     (process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` : "");
-  const raw = fromEnv || "http://localhost:3000";
+  const raw = fromEnv || "https://al-qudairani.com";
   try {
     return new URL(raw);
   } catch {
-    return new URL("http://localhost:3000");
+    return new URL("https://al-qudairani.com");
   }
 }
 
