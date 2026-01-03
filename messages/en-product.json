@@ -97,14 +97,6 @@
         {
           "title": "Breeder Feed",
           "desc": "Customized blends for breeders to ensure fertility and flock health."
-        },
-        {
-          "title": "Starter Broiler Feed",
-          "desc": "Well-balanced starter formulas for broiler chicks to ensure a strong beginning."
-        },
-        {
-          "title": "Special Feed Additives",
-          "desc": "Micro-element additives to improve performance and immunity."
         }
       ],
       "phones": ["+963985933335", "+963989889025"]
@@ -175,16 +167,16 @@
       },
       "sections": [
         {
-          "title": "Veterinary Medicines",
-          "desc": "Approved treatments for poultry diseases under professional oversight."
+          "title": "Core Vaccinations",
+          "desc": "Vaccination schedules covering common poultry diseases."
         },
         {
-          "title": "Vaccines",
-          "desc": "Certified vaccines following balanced plans to improve immunity and reduce infections."
+          "title": "Selective Antibiotics",
+          "desc": "Safe and effective choices under veterinary supervision."
         },
         {
-          "title": "Vaccination Programs",
-          "desc": "Flexible plans tailored to bird age and farm health status."
+          "title": "Immune Support",
+          "desc": "Supplements to enhance disease resistance and reduce stress."
         }
       ],
       "phones": ["+963 985 933 335"]
@@ -289,24 +281,16 @@
       },
       "sections": [
         {
+          "title": "Premix",
+          "desc": "Ready blends of micro-elements to support performance."
+        },
+        {
           "title": "Vitamins",
-          "desc": "Comprehensive vitamin supplements to support health and growth."
+          "desc": "Supplements to boost immunity and growth."
         },
         {
           "title": "Minerals",
-          "desc": "Essential minerals to improve performance and production."
-        },
-        {
-          "title": "Enzymes",
-          "desc": "Enzymes to improve feed conversion and digestibility."
-        },
-        {
-          "title": "Probiotics & Toxin Binders",
-          "desc": "Gut health solutions and toxin binders to reduce stress."
-        },
-        {
-          "title": "Natural Immune Boosters",
-          "desc": "Natural products that enhance immunity and reduce disease rates."
+          "desc": "Essential minerals to improve health and production."
         }
       ],
       "phones": ["+963 985 933 335"]

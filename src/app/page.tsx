@@ -4,6 +4,7 @@ import About from "../../components/about/page"
 import WhyUs from "../../components/WhyUs/page"
 import Partner from "../../components/partner/page"
 import Footer from "../../components/footer/page"
+import Questions from "../../components/questions/page"
 export const revalidate = 3600;
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <ProductsSection />
       <WhyUs />
       <Partner />
+      <Questions />
       <Footer />
     </main>
   );

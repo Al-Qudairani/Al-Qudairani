@@ -8,6 +8,7 @@
       "home": "Home",
       "about": "About",
       "products": "Our Products",
+      "faq": "FAQ",
       "contact": "Contact Us"
     },
     "actions": {
@@ -146,6 +147,33 @@
       "start_partnership": "Start Partnership Now"
     },
     "image_alt": "Partnership"
+  },
+  "questions": {
+    "section_label": "Frequently Asked Questions",
+    "heading": "Answers to common questions",
+    "description": "Quick information to help you understand our services and products.",
+    "items": [
+      {
+        "q": "How can I order products and arrange delivery?",
+        "a": "Contact us via WhatsApp or phone to specify items and quantities, then we schedule delivery according to our routes."
+      },
+      {
+        "q": "Do you offer wholesale pricing and long-distance shipping?",
+        "a": "Yes. We provide wholesale pricing and refrigerated shipping to provinces based on an agreement that ensures product integrity."
+      },
+      {
+        "q": "What quality standards do you follow for eggs and meat?",
+        "a": "We perform routine checks, follow standard sorting and packaging, and maintain proper cold chains to ensure high quality."
+      },
+      {
+        "q": "Do you provide technical consultation for farms?",
+        "a": "Yes. Our team offers technical support for vaccination, feeding, and operational management when needed."
+      },
+      {
+        "q": "How do I know daily availability?",
+        "a": "Ask us via WhatsApp. We will share daily availability and the best time to place an order."
+      }
+    ]
   },
   "footer": {
     "brand_name": "Al-Qudairani Company",

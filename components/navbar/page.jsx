@@ -85,6 +85,13 @@ export default function Navbar() {
           </Link>
           <Link
             className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary"
+            href="/#questions"
+            onClick={(e) => { e.preventDefault(); handleNav('questions'); }}
+          >
+            {t('navbar.nav.faq')}
+          </Link>
+          <Link
+            className="px-3 py-2 rounded-md hover:bg-primary hover:text-secondary"
             href="/#contact"
             onClick={(e) => { e.preventDefault(); handleNav('contact'); }}
           >
@@ -181,6 +188,13 @@ export default function Navbar() {
             onClick={(e) => { e.preventDefault(); handleNav('products'); }}
           >
             {t('navbar.nav.products')}
+          </Link>
+          <Link
+            className="w-full text-center px-4 py-3 hover:bg-primary hover:text-secondary rounded-md"
+            href="/#questions"
+            onClick={(e) => { e.preventDefault(); handleNav('questions'); }}
+          >
+            {t('navbar.nav.faq')}
           </Link>
 
           <Link
