@@ -50,16 +50,15 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="relative group">
             <div className="absolute -inset-3 bg-primary rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video border-b-8 border-primary">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video border-b-8 border-primary dark:border-primary-dark transition-transform transform group-hover:-translate-y-1">
               <div className="absolute inset-0">
                 <video
                   src="/videos/video.mp4"
                   className="absolute inset-0 w-full h-full object-cover"
                   autoPlay
-                  
+                  controls
                   loop
                   playsInline
-                  controls
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/25 to-transparent pointer-events-none"></div>
