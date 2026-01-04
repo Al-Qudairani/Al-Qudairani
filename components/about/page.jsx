@@ -1,9 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import dynamic from "next/dynamic";
 const WhatsAppIcon = dynamic(() => import("@mui/icons-material/WhatsApp"), { ssr: false });
-const PlayArrowIcon = dynamic(() => import("@mui/icons-material/PlayArrow"), { ssr: false });
 const CheckCircleIcon = dynamic(() => import("@mui/icons-material/CheckCircle"), { ssr: false });
 import { useI18n } from "@/i18n/I18nProvider";
 
@@ -54,20 +52,17 @@ export default function About() {
             <div className="absolute -inset-3 bg-primary rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video border-b-8 border-primary">
               <div className="absolute inset-0">
-                <Image
-                  alt={t("about.image_alt")}
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjWAhWkWdoQdwfHAJlEcr9PwnExWtoboAgmh7h2ax6MHwGd8r4ITA3DIfA-JZZzrl448CBqmxJEmvvjHbzce9T41HF0ddZ_SGDC8dtVqC1MQ52KUD17TNTllcCTJvp2303RYOeJ0YaeO9GTRb7r5GUSWSNtzbayq9BacfNjU9c9aDGNg5d6I5W5ioAYmdqIDBOiYKJY3h9bkbLSrFYY8e-W1HNGcPojCZEmAbbPsEXesUG4LaMgfvL-VsBdOwBi5gjQ0AdhduHZBI"
-                  fill
-                  sizes="100vw"
-                  className="object-cover"
+                <video
+                  src="/videos/video.mp4"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  autoPlay
+                  
+                  loop
+                  playsInline
+                  controls
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/25 to-transparent"></div>
-              <div className="absolute inset-0 flex items-center justify-center cursor-pointer">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center pl-1 shadow-lg ring-8 ring-white/10 hover:ring-white/20 transition">
-                  <PlayArrowIcon className="text-secondary" fontSize="large" />
-                </div>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/25 to-transparent pointer-events-none"></div>
             </div>
           </div>
 
