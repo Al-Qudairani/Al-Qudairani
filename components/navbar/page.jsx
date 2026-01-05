@@ -47,12 +47,12 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 flex-1">
           <Image
             alt={t('navbar.alt.logo')}
-            src="/icons/13.png"
+            src="/icons/8.png"
             width={100}
             height={100}
             className="h-16 sm:h-16 md:h-20 w-auto"
           />
-          <div>
+          {/* <div>
             <h1 className="text-[14px] md:text-xl lg:text-2xl font-bold text-primary-dark">
               {t('navbar.brand_name')}
             </h1>
@@ -61,7 +61,7 @@ export default function Navbar() {
                 {t('navbar.brand_tagline')}
               </p>
             )}
-          </div>
+          </div> */}
         </Link>
 
         {/* Desktop Nav */}
