@@ -1,6 +1,14 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+@font-face {
+  font-family: "Expo Arabic";
+  src: local("Expo Arabic"), url("/Fonts/alfont_com_AlFont_com_ExpoArabic-Book-1.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --primary: #FBBF22;
   --primary-dark: #DD9F13;
@@ -23,8 +31,8 @@
   --color-background: var(--background);
   --color-card-light: var(--card-light);
   --color-card-dark: var(--card-dark);
-  --font-sans: var(--font-expo), Cairo, sans-serif;
-  --font-display: var(--font-expo), Cairo, sans-serif;
+  --font-sans: var(--font-expo), "Expo Arabic", Cairo, sans-serif;
+  --font-display: var(--font-expo), "Expo Arabic", Cairo, sans-serif;
   --font-mono: monospace;
   --radius: 0.5rem;
 }

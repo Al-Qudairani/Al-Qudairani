@@ -50,7 +50,7 @@ export default function Navbar() {
             src="/icons/13.png"
             width={100}
             height={100}
-            className="h-14 sm:h-16 md:h-20 w-auto"
+            className="h-16 sm:h-16 md:h-20 w-auto"
           />
           <div>
             <h1 className="text-[14px] md:text-xl lg:text-2xl font-bold text-primary-dark">
