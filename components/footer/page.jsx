@@ -45,7 +45,7 @@ export default function Footer() {
 
               <li className="flex items-center justify-center gap-3">
                 <EmailSharpIcon className="text-primary" fontSize="small" />
-                <span className="text-gray-300">info@alqudairani.com</span>
+                <span className="text-gray-300">alqudairanicompany1984@gmail.com</span>
               </li>
             </ul>
           </div>

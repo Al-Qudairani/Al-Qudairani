@@ -127,10 +127,6 @@
       },
       "sections": [
         {
-          "title": "Imported Eggs",
-          "desc": "Fertilized eggs imported with certified quality and strict monitoring."
-        },
-        {
           "title": "Local Eggs",
           "desc": "Locally produced hatching eggs with excellent fertility rates."
         }
@@ -239,10 +235,6 @@
         {
           "title": "Fresh Chicken",
           "desc": "Daily supply of fresh chicken with commitment to safety standards."
-        },
-        {
-          "title": "Frozen Chicken",
-          "desc": "Products frozen along cold chains that maintain quality."
         },
         {
           "title": "Live Chicken",
