@@ -55,7 +55,6 @@ export default function About() {
                 <video
                   src="/videos/video.mp4"
                   className="absolute inset-0 w-full h-full object-cover"
-                  autoPlay
                   controls
                   loop
                   playsInline
