@@ -16,7 +16,7 @@ export default function Navbar() {
   const [isDark, setIsDark] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
-  const { t, locale, setLocale } = useI18n();
+  const { t, locale, setLocale, isPending } = useI18n();
   const isRTL = locale === 'ar';
 
   // 🔹 أحجام الأيقونات
@@ -39,6 +39,16 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-background/90 backdrop-blur-md shadow-md border-b-4 border-primary">
+      {isPending && (
+        <div className="fixed inset-0 z-[70] bg-black/50 flex items-center justify-center">
+          <div
+            className="w-10 h-10 rounded-full border-4 border-white/30 border-t-white animate-spin"
+            role="status"
+            aria-live="polite"
+            aria-label="جاري تغيير اللغة"
+          ></div>
+        </div>
+      )}
 
       {/* ===== Top Bar ===== */}
       <div className="w-full px-4 md:px-6 lg:px-8 py-3 flex items-center">
@@ -131,6 +141,8 @@ export default function Navbar() {
           <button
             className="p-2 rounded-full hover:bg-card-light"
             onClick={() => setLocale(locale === 'ar' ? 'en' : 'ar')}
+            aria-busy={isPending}
+            disabled={isPending}
           >
             <GTranslateIcon className={`${iconClass} text-primary-dark`} />
           </button>
