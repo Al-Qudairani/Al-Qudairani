@@ -15,7 +15,7 @@ export default function Questions() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="questions" className="py-20 bg-background transition-colors duration-300 dark:bg-background-dark">
+    <section id="questions" className="py-20 bg-background transition-colors duration-300 dark:bg-background-dark" style={{ contentVisibility: "auto", containIntrinsicSize: "700px" }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1 rounded-full bg-primary/15 text-primary font-bold">

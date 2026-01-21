@@ -1,25 +1,53 @@
 'use client';
 import { useEffect, useRef, useState } from "react";
-import dynamic from "next/dynamic";
-const WhatsAppIcon = dynamic(() => import("@mui/icons-material/WhatsApp"), { ssr: false });
-const CheckCircleIcon = dynamic(() => import("@mui/icons-material/CheckCircle"), { ssr: false });
 import { useI18n } from "@/i18n/I18nProvider";
+
+function Icon({ name, className }) {
+  switch (name) {
+    case "whatsapp":
+      return (
+        <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+          <path d="M12 2a10 10 0 0 0-8.94 14.5L2 22l5.6-1.49A10 10 0 1 0 12 2zm5.6 14.19c-.24.67-1.4 1.28-1.96 1.31-.52.03-1.17.05-2-.13a8.87 8.87 0 0 1-3.95-2.04 8.79 8.79 0 0 1-2.67-3.39c-.65-1.3-.7-2.39-.62-3.2.08-.81.55-1.2.93-1.36.24-.11.52-.12.84.01.26.11.43.3.58.64.2.45.74 1.82.81 1.95.07.13.12.28.02.45-.1.16-.15.26-.29.41-.14.15-.3.33-.43.45-.14.12-.3.25-.13.56.17.3.74 1.22 1.58 1.98 1.09.96 2.02 1.26 2.32 1.4.3.14.48.12.65-.07.17-.19.75-.87.95-1.18.2-.31.41-.26.67-.16.26.1 1.64.77 1.92.91.28.14.47.21.54.33.07.12.07.69-.17 1.36z" />
+        </svg>
+      );
+    case "check":
+      return (
+        <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+          <path d="M9 16.2l-3.5-3.5L4 14.2l5 5 12-12-1.4-1.4z" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
 
 export default function About() {
   const { t, messages } = useI18n();
   const statsRef = useRef(null);
+  const videoRef = useRef(null);
   const [start, setStart] = useState(false);
+  const [isVideoVisible, setIsVideoVisible] = useState(false);
   useEffect(() => {
     const el = statsRef.current;
-    if (!el) return;
-    const io = new IntersectionObserver((entries) => {
-      if (entries[0]?.isIntersecting) {
-        setStart(true);
-        io.disconnect();
-      }
-    }, { threshold: 0.4 });
-    io.observe(el);
-    return () => io.disconnect();
+    if (el) {
+      const io = new IntersectionObserver((entries) => {
+        if (entries[0]?.isIntersecting) {
+          setStart(true);
+          io.disconnect();
+        }
+      }, { threshold: 0.4 });
+      io.observe(el);
+    }
+    const v = videoRef.current;
+    if (v) {
+      const vio = new IntersectionObserver((entries) => {
+        if (entries[0]?.isIntersecting) {
+          setIsVideoVisible(true);
+          vio.disconnect();
+        }
+      }, { threshold: 0.15 });
+      vio.observe(v);
+    }
   }, []);
 
   function Counter({ end, duration = 1200, prefix = "", suffix = "", start }) {
@@ -39,7 +67,7 @@ export default function About() {
     return <div className="text-3xl font-extrabold text-primary">{`${prefix}${val}${suffix}`}</div>;
   }
   return (
-    <section className="py-24 bg-background-light dark:bg-background-dark transition-colors duration-300" id="about">
+    <section className="py-24 bg-background-light dark:bg-background-dark transition-colors duration-300" id="about" style={{ contentVisibility: "auto", containIntrinsicSize: "800px" }}>
       <div className="container mx-auto px-4">
         <div className="text-center md:text-right mb-12">
           <span className="inline-block px-4 py-1 rounded-full bg-primary/15 text-primary font-bold">{t("about.section_label")}</span>
@@ -51,14 +79,17 @@ export default function About() {
           <div className="relative group">
             <div className="absolute -inset-3 bg-primary rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video border-b-8 border-primary dark:border-primary-dark transition-transform transform group-hover:-translate-y-1">
-              <div className="absolute inset-0">
+              <div ref={videoRef} className="absolute inset-0">
                 <video
-                  src="/videos/video.mp4"
                   className="absolute inset-0 w-full h-full object-cover"
                   controls
                   loop
                   playsInline
-                />
+                  poster="/icons/whiteEgg.png"
+                  preload="none"
+                >
+                  {isVideoVisible && <source src="/videos/video.mp4" type="video/mp4" />}
+                </video>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/25 to-transparent pointer-events-none"></div>
             </div>
@@ -69,7 +100,7 @@ export default function About() {
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {(messages?.about?.highlights || []).map((item, idx) => (
                 <div key={idx} className="flex items-center gap-3 bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm">
-                  <CheckCircleIcon className="text-primary" fontSize="small" />
+                  <Icon name="check" className="text-primary w-4 h-4" />
                   <span className="text-foreground">{item}</span>
                 </div>
               ))}
@@ -102,7 +133,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-secondary font-bold px-6 py-3 rounded-md shadow-lg transition-colors"
               >
-                <WhatsAppIcon fontSize="small" className="shrink-0" />
+                <Icon name="whatsapp" className="w-5 h-5 shrink-0" />
                 <span>{t("about.actions.contact")}</span>
               </a>
 

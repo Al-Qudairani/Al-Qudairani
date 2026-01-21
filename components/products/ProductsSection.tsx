@@ -59,7 +59,17 @@ export default function ProductsSection() {
     };
   });
   return (
-    <section className="py-20 bg-background transition-colors duration-300 dark:bg-background-dark" id="products">
+    <section className="py-20 bg-background transition-colors duration-300 dark:bg-background-dark" id="products" style={{ contentVisibility: "auto", containIntrinsicSize: "900px" }}>
+      {(isPending || isNavigatingId !== null) && (
+        <div className="fixed inset-0 z-[60] bg-black/50 flex items-center justify-center">
+          <div
+            className="w-12 h-12 rounded-full border-4 border-white/30 border-t-white animate-spin"
+            role="status"
+            aria-live="polite"
+            aria-label="جاري التحميل"
+          ></div>
+        </div>
+      )}
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <span className="text-primary dark:text-primary-dark font-bold text-lg mb-2 block">{t("products.section_label")}</span>
