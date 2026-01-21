@@ -85,13 +85,11 @@ export default function About() {
                   controls
                   loop
                   playsInline
-                  poster="/icons/whiteEgg.png"
                   preload="none"
                 >
                   {isVideoVisible && <source src="/videos/video.mp4" type="video/mp4" />}
                 </video>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/25 to-transparent pointer-events-none"></div>
             </div>
           </div>
 
