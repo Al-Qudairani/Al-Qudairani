@@ -1,10 +1,18 @@
 'use client';
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { useI18n } from "@/i18n/I18nProvider";
 
+import imgTableEggs from "../../public/icons/1.png";
+import imgHatchingEggs from "../../public/icons/بيض تفقيس.png";
+import imgPoultryMeat from "../../public/icons/لحوم دواجن1.png";
+import imgFeeds from "../../public/icons/Pellet.png";
+import imgMedicines from "../../public/icons/ادوية ولقاحات1.png";
+import imgBroilerChick from "../../public/icons/صوص لاحم.png";
+import imgEquipment from "../../public/icons/معدات.png";
+import imgAdditives from "../../public/icons/متممات علفية.png";
 const slugs = [
   "table-eggs",
   "hatching-eggs",
@@ -16,15 +24,15 @@ const slugs = [
   "equipment",
 ] as const;
 
-const images: Record<string, string> = {
-  "table-eggs": "/icons/1.png",
-  "hatching-eggs": "/icons/بيض تفقيس.png",
-  "poultry-meat": "/icons/لحوم دواجن1.png",
-  feeds: "/icons/Pellet.png",
-  medicines: "/icons/ادوية ولقاحات1.png",
-  "broiler-chick": "/icons/صوص لاحم.png",
-  equipment: "/icons/معدات.png",
-  additives: "/icons/متممات علفية.png",
+const images: Record<string, StaticImageData> = {
+  "table-eggs": imgTableEggs,
+  "hatching-eggs": imgHatchingEggs,
+  "poultry-meat": imgPoultryMeat,
+  feeds: imgFeeds,
+  medicines: imgMedicines,
+  "broiler-chick": imgBroilerChick,
+  equipment: imgEquipment,
+  additives: imgAdditives,
 };
 
 export default function ProductsSection() {
@@ -88,6 +96,9 @@ export default function ProductsSection() {
                   alt={product.alt}
                   fill
                   sizes="(min-width:1024px) 25vw, (min-width:640px) 50vw, 100vw"
+                  placeholder="blur"
+                  quality={60}
+                  priority={product.id <= 4}
                   className="object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
               </div>

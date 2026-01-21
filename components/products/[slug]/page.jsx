@@ -9,6 +9,8 @@ import data from '../data.json';
 import Link from 'next/link';
 import { useI18n } from '@/i18n/I18nProvider';
 
+const BLUR_DATA_URL = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=';
+
 export default function ProductPage(props) {
   const { t, messages } = useI18n();
   const dynamicParams = useParams();
@@ -72,6 +74,9 @@ export default function ProductPage(props) {
             fill
             priority
             sizes="100vw"
+            placeholder="blur"
+            blurDataURL={BLUR_DATA_URL}
+            quality={60}
             className="object-cover blur-[8px] opacity-50"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50"></div>
@@ -109,6 +114,9 @@ export default function ProductPage(props) {
                       src={sec.image}
                       fill
                       sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
+                      placeholder="blur"
+                      blurDataURL={BLUR_DATA_URL}
+                      quality={60}
                       className="object-cover transform group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-black/10"></div>
